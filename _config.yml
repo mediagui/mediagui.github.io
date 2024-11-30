@@ -5,3 +5,5 @@ plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 title: Miguel Ángel Medina
 description: Pasionate Java/SpringBoot developer
+show_downloads: false
+google_analytics: G-KB3T9JS6Z0
