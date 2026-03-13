@@ -1,0 +1,330 @@
+cv:
+  name: Miguel Angel Medina
+  label: Software Engineer
+  email: mediagui@gmail.com
+  location: Madrid, Spain
+  image: ""
+  summary: Software engineer with over 20 years of experience in Java (backend) development, specialized in Spring Boot and JPA/Hibernate, now also proficient in Golang and relational databases such as PostgreSQL, as well as cloud environments like Snowflake. I have designed and maintained high-performance REST APIs, complex integrations, and scalable architectures for demanding production environments. I enjoy optimizing and improving code quality while applying solid architectural best practices. I’m currently focused on backend development and architecture projects.
+
+  social_networks:
+    - network: X
+      username: mediagui
+    - network: GitHub
+      username: mediagui
+    - network: LinkedIn
+      username: medinaaguilar
+
+  address:
+    street: 
+    city: Madrid
+    # region: Madrid
+    # postalCode: 28025
+    countryCode: ES
+
+  sections:
+    Education:
+      - institution: Universidad Nacional de Educación a Distancia
+        location: Madrid, Spain
+        url: https://www.uned.es/
+        area: IT
+        studyType: Software Engineering
+        start_date: 2000
+        end_date: ...
+        # start_date: 1900
+        # end_date: 1905
+        # score: ""
+        # courses: "Theory of Relativity"
+        # highlights:
+        #   - Description 1.
+        #   - Description 2.
+
+      - institution: CENEC Formación - Virgen de la Paloma (Vocational Training Center)
+        location: Madrid, Spain
+        area: IT
+        studyType: Technical Degree in Computer Systems
+        start_date: 1995
+        end_date: 1997
+        # highlights:
+        #   - Description 1.
+        #   - Description 2.
+
+    Experience:
+      - company: Base 100 S.A.
+        position: Senior Software Engineer
+        location: Madrid, Spain
+        start_date: 2026-03
+        end_date: ...
+        summary: 
+        # highlights:
+        #   - Relativity
+        #   - Description 2.
+
+      - company: InAtlas S.L.
+        position: Senior Software Engineer
+        location: Madrid, Spain (Remote 100%)
+        start_date: 2023-12
+        end_date: 2026-01
+        summary: I have developed and evolved several REST based microservices and a monotlith which is being converted into other services, extracting the security core and other parts as the reporting logic. 
+          I used to use sing Java 11/17, Spring Boot 2, PostgreSQL as database and Snowflake as datawarehouse. All of them deployed on an externalized AWS Cloud.
+        highlights:
+          - Evolving and maintaining GeoBiz platform.
+          - Develop a GeoCRM platform, which is a CRM for the the defined industry areas for the GeoBiz platform, with a microservices architecture and an API first approach.
+          - Data selling API, which is a microservice that provides an API to sell data to customers, with a microservices architecture and an API first approach. Using GraphQL as query language and Spring Boot 2 as framework.
+          - Api Gateway, which is a microservice that will provide and check the authentication for the current and the future microservices, with a microservices architecture and an API first approach. Using Spring Boot 2 as framework and Keycloak as identity provider.
+
+      
+      - company: Neoris
+        position: Technical Lead
+        location: Madrid, Spain
+        start_date: 2022-04
+        end_date: 2023-12
+        summary: Technical leadership of greenfield micro-services project for Zara. Responsible for architecture, technical guidance and mentoring of multidisciplinary team of 6 developers (2 interns). 
+          In parallel, making evaluations and giving regular feedback to a group of 15+ people
+        highlights:
+          - Backlog management alongside the PO
+          - Design and implementation of microservices using MVC and hexagonal architecture with DDD. 
+          - Successful technical management of critical project for workshop operations (pressing, packaging).
+          - CI/CD automation with Spinnaker and quality gates with SonarQube. 
+          - Junior developers mentoring
+
+      - company: Neoris
+        position: Senior Consultant
+        location: Madrid, Spain
+        start_date: 2017-06
+        end_date: 2023-12
+        summary: Analysis, design and development in multidisciplinary agile team. Technical leadership in architecture of critical solutions for cash management and payments.
+        highlights:
+          - Log4Shell vulnerability mitigation (CVE-2021-44228). Implementation of temporary solution until 
+            update to a secure version for all projects. Solution deployed to production in 1 day.
+          - Real-time cypher/decypher database in replacement to Oracle Transpaent Data Encryption (Oracle TDE) to comply with 
+            the Spanish LOPD.
+          - Development of a Java library/maven dependency that centralises and automates prevention of critical vulnerabilities 
+            (XSS, CSRF, SQL injection) in Java applications. 
+          - LATAM payments platform integrated with 12+ banks (acceptance of cash, mixed and card payments). 
+          - Cash order manager for Portugal (banking integration).
+          - Smart Cash System. user/role/permission management for cash machines. Real-time REST encryption/decryption service 
+            (performance-critical).
+          - Secure reverse proxy (iframe replacement, XSS/CSRF/SQL Injection prevention). 
+          - OAuth 2 implementation and Azure Cloud integration.
+          - Mentoring in best development and unit testing practices
+
+      - company: TCS (Tata Consultancy Services)
+        position: Functional Analyst/Developer
+        location: Madrid, Spain
+        start_date: 2012
+        end_date: 2017
+        summary: Complete analysis, design and implementation of enterprise projects. Responsible for enhancements and maintenance of different projects.
+        highlights:
+          - Design and implementation of enterprise CI/CD system using Jenkins + SonarQube + Maven + Archiva + SVN
+          - Complete architecture from taking requirements → use cases → design → implementation Security testing automation (OWASP ZED, Jenkins).
+          - Monolithic intranet application security improvements XSS/CSRF/SQL Injection prevention
+
+      - company: Madrid City Council (IT Department - IAM)
+        position: Head of IT Division
+        location: Madrid, Spain
+        start_date: 2004
+        end_date: 2012
+        summary: In charge of the IT division of the Madrid City Council, responsible for the design and implementation of the IT strategy and architecture of the city council. Responsible for the management of a team of 20+ people. Responsible for the design and migration of legacy systems to modern Java and Spring architecture.
+        highlights:
+          - RPT Vista Software. Tool used search and query economic/professional data from 10,000+ employees (nowadays still in production). 
+          - Legacy systems architecture migration from Visual Basic 6 to Java/Spring.
+          - Linux servers administration Debian + Apache + MySQL.
+
+      - company: Alfa Multimedia
+        position: Functional Analyst/Developer
+        location: Madrid, Spain
+        start_date: 2000
+        end_date: 2004
+        summary: Analysis, development and implementation of medical management solutions. In charge of the network infrastructure of the company. Responsible for the design and implementation of the IT strategy and architecture of the company. Responsible for the management of a team of 5+ people. Responsible for the design and migration of legacy systems to modern Java and Spring architecture.
+        highlights:
+          - Medical office management software (GestMed). Deployed in 15+ clinics. Management software for Medical Associations from analysis to operational support. 
+          - Ethernet infrastructure design and implementation.
+          - Windows NT/2000 and Linux servers administration.
+
+    # Volunteer:
+    #   - company: People's Climate March
+    #     position: Lead Organizer
+    #     location: Zurich, Switzerland
+    #     start_date: 2014-04-01
+    #     end_date: 2015-07-01
+    #     summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+    #     highlights:
+    #       - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
+    #       - "Men of the year 2014 by Time magazine"
+
+    # Awards:
+    #   - title: Nobel Prize in Physics
+    #     authors:
+    #       - "Royal Swedish Academy of Sciences"
+    #     date: 1921-11-01
+    #     awarder: Royal Swedish Academy of Sciences
+    #     url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
+    #     summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
+
+    #   - title: Max Planck Medal
+    #     authors:
+    #       - "German Physical Society"
+    #     date: 2029
+    #     awarder: German Physical Society
+    #     summary: Awarded for outstanding scientific achievement
+
+    # Publications:
+    #   - title: Zur Elektrodynamik bewegter Körper
+    #     authors:
+    #       - Albert Einstein
+    #     publisher: Annalen der Physik
+    #     releaseDate: 1905-06-30
+    #     url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
+    #     summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+
+    #   - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
+    #     authors:
+    #       - Albert Einstein
+    #     publisher: Annalen der Physik
+    #     releaseDate: 1905-03-18
+    #     url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
+    #     summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
+
+    #   - title: Die Grundlage der allgemeinen Relativitätstheorie
+    #     authors:
+    #       - Albert Einstein
+    #     publisher: Annalen der Physik
+    #     releaseDate: 1916-03-20
+    #     url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
+    #     summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+
+    Skills:
+      - name: Backend Development
+        level: Expert
+        icon: fa-solid fa-hashtag
+        keywords: "Java SE/EE, Spring Framework (Core, MVC, Batch, Data, Security), Spring Boot, Microservices, Hexagonal Architecture, Hibernate/JPA, GraphQL, Redis"
+      - name: Database Design
+        level: Advanced
+        icon: fa-solid fa-hashtag
+        keywords: "PostgreSQL, Snowflake (Data Warehouse), Oracle 11g-19c, MySQL, SQL Server, Redis"
+      - name: Frontend Development
+        level: Intermediate
+        icon: fa-solid fa-hashtag
+        keywords: "JavaScript ES6+, Vue.js 2-3, jQuery 3, Bootstrap 3-5, Angular, TypeScript"
+      - name: Cloud & DevOps 
+        level: Advanced
+        icon: fa-solid fa-hashtag
+        keywords: "Docker, Jenkins, CI/CD, Git/GitHub, GitHub Copilot, Kibana, AWS Cloud, Azure Cloud, Spinnaker, SonarQube, Go/Golang (In progress)"
+      - name: Testing & Security 
+        level: Advanced
+        icon: fa-solid fa-hashtag
+        keywords: "JUnit 5, Mockito, OWASP Top 10, RSA Encryption, OAuth2, XSS/CSRF/SQL Injection Prevention, ESAPI, Vulnerability prevention and mitigation"
+      - name: Management Tools 
+        level: Advanced
+        icon: fa-solid fa-hashtag
+        keywords: "Jira, Wrike (issues), Notion (documentation)"
+      - name: Professional Tools 
+        level: Advanced
+        icon: fa-solid fa-hashtag
+        keywords: "Git/GitHub, Maven, Postman, SonarQube, JMeter, IntelliJ IDEA Ultimate, Jira, Confluence "
+
+    Languages:
+      - name: Spanish
+        summary: "Native speaker"
+
+      - name: English
+        summary: "C1 Level - EOI Madrid (in progress)"
+
+    Interests:
+      - name: Programming
+        icon: fa-solid fa-tag
+        keywords: "Software development, software architecture, code quality, design patterns, clean code, refactoring, software craftsmanship"
+ 
+    Certificates:
+      # - name: Machine Learning
+      #   date: 2018-01-01
+      #   issuer: Stanford University
+      #   icon: fa-solid fa-location-dot
+
+      - name: Advanced Features of Java 21 - [Certificate](https://www.linkedin.com/learning/certificates/f3ea22f410f42dcc6d0a8c39f1bd411f1a5268bd5fb03404d5d1a48b62254253?trk=share_certificate "https://www.linkedin.com/learning/certificates/f3ea22f410f42dcc6d0a8c39f1bd411f1a5268bd5fb03404d5d1a48b62254253?trk=share_certificate")  
+      - name: Complete Guide To Java Testing with JUnit 5 & Mockito - [Certificate](https://www.linkedin.com/learning/certificates/9ff4ddf8e948245a6af6fbf6b076ec2c4ae751b1b9a6f9179d63a2f3fc818b3e?trk=share_certificate "https://www.linkedin.com/learning/certificates/9ff4ddf8e948245a6af6fbf6b076ec2c4ae751b1b9a6f9179d63a2f3fc818b3e?trk=share_certificate")  
+      - name: Functional Programming with Java - [Certificate](https://www.linkedin.com/learning/certificates/50b20c3ccec3a656f11fc45bb42b7871adc78b03e65010cd2d2585b9eaf8efed?trk=share_certificate "https://www.linkedin.com/learning/certificates/50b20c3ccec3a656f11fc45bb42b7871adc78b03e65010cd2d2585b9eaf8efed?trk=share_certificate")  
+      - name: Java Profiling - [Certificate](https://www.linkedin.com/learning/certificates/472569c6cd8ec28fc71b659bd1089cd14d1c300f0a2eea4e7f3d8110cb6dec7e?trk=share_certificate "https://www.linkedin.com/learning/certificates/472569c6cd8ec28fc71b659bd1089cd14d1c300f0a2eea4e7f3d8110cb6dec7e?trk=share_certificate")  
+      - name: Java Memory Management Values and References - [Certificate](https://www.linkedin.com/learning/certificates/bb713fa157d94c375671367f5a422cf813514cbe79a82ce16dabf443969b847e?trk=share_certificate "https://www.linkedin.com/learning/certificates/bb713fa157d94c375671367f5a422cf813514cbe79a82ce16dabf443969b847e?trk=share_certificate")  
+      - name: Java Refactoring Best Practices - [Certificate](https://www.linkedin.com/learning/certificates/bf13cab5d32e8daa222f7d120c94892bfc6792581d438fbe6d5b305a362d466f?trk=share_certificate "https://www.linkedin.com/learning/certificates/bf13cab5d32e8daa222f7d120c94892bfc6792581d438fbe6d5b305a362d466f?trk=share_certificate")  
+      - name: Java Advanced Concepts for High-Performance Development - [Certificate](https://www.linkedin.com/learning/certificates/592d927abf78da01a4c8d282bacfbb6b6d955561d746783c66be3f77696c1eab?trk=share_certificate "https://www.linkedin.com/learning/certificates/592d927abf78da01a4c8d282bacfbb6b6d955561d746783c66be3f77696c1eab?trk=share_certificate")  
+      - name: Java Lambdas and Streams - [Certificate](https://www.linkedin.com/learning/certificates/e5940472fc6e756a077042f162d2326774c9ce45d26f595fd4a5594d37d17067?trk=share_certificate "https://www.linkedin.com/learning/certificates/e5940472fc6e756a077042f162d2326774c9ce45d26f595fd4a5594d37d17067?trk=share_certificate")  
+      - name: Java Tips and Tricks - [Certificate](https://www.linkedin.com/learning/certificates/993c1857258fe066d7fe308558bf4c849dfe30df2249bad79f2721e1516ff2f9?trk=share_certificate "https://www.linkedin.com/learning/certificates/993c1857258fe066d7fe308558bf4c849dfe30df2249bad79f2721e1516ff2f9?trk=share_certificate")  
+      - name: Aprende Unit Test en Java con Junit 5 y Mockito - [Certificate](https://www.udemy.com/certificate/UC-6dee26f4-b19b-4bd7-8cee-1b88b046503a "https://www.udemy.com/certificate/UC-6dee26f4-b19b-4bd7-8cee-1b88b046503a")  
+      - name: JPA Avanzado_ Uso profesional de JPA con Hibernate - [Certificate](https://www.udemy.com/certificate/UC-1a63b1db-5eb2-488f-bbd5-44d9c322ec7a "https://www.udemy.com/certificate/UC-1a63b1db-5eb2-488f-bbd5-44d9c322ec7a")  
+      - name: Java Application Performance Tuning and Memory Management - [Certificate](https://www.udemy.com/certificate/UC-2c97f156-0fa8-4913-ab05-0a40f7f2a4e4 "https://www.udemy.com/certificate/UC-2c97f156-0fa8-4913-ab05-0a40f7f2a4e4")  
+      - name: Modern Java Mastering Features from Java 8 to Java 25 - [Certificate](https://www.udemy.com/certificate/UC-bd2b2154-9889-4ef4-9651-7197b2ab2df7 "https://www.udemy.com/certificate/UC-bd2b2154-9889-4ef4-9651-7197b2ab2df7")  
+      - name: Programacion funcional en Java con Lambdas y Streams - [Certificate](https://www.udemy.com/certificate/UC-2f2eb080-523d-4c8a-b138-ab8a58be93a1 "https://www.udemy.com/certificate/UC-2f2eb080-523d-4c8a-b138-ab8a58be93a1")  
+      - name: Spring Framwork y Spring boot - [Certificate](https://www.udemy.com/certificate/UC-39a8cf14-0a8f-4a55-b42a-47aace7aa88e "https://www.udemy.com/certificate/UC-39a8cf14-0a8f-4a55-b42a-47aace7aa88e")  
+      - name: Master Java: Unit testing (JUnit) - [Certificate](https://www.linkedin.com/learning/certificates/2cd99e9947b632254e68a6cbee374506c9f7cc10daa6763894786db0fa72ccdc?trk=share_certificate "https://www.linkedin.com/learning/certificates/2cd99e9947b632254e68a6cbee374506c9f7cc10daa6763894786db0fa72ccdc?trk=share_certificate")  
+      - name: Test-Driven Development in Spring Boot with JUnit and Mockito - [Certificate](https://www.linkedin.com/learning/certificates/7bc5acd1c9587aa4045800eff852a3ba6eb690d67bc436234dd286eec781adc8?trk=share_certificate "https://www.linkedin.com/learning/certificates/7bc5acd1c9587aa4045800eff852a3ba6eb690d67bc436234dd286eec781adc8?trk=share_certificate")  
+
+      - name: Go Practice: Functions - [Certificate](https://www.linkedin.com/learning/certificates/011955cc24a696009558d61652dec98e6b9c67f904ea02163031da3e86bbfb02?trk=share_certificate "https://www.linkedin.com/learning/certificates/011955cc24a696009558d61652dec98e6b9c67f904ea02163031da3e86bbfb02?trk=share_certificate")  
+      - name: Go Standard Library - [Certificate](https://www.linkedin.com/learning/certificates/4737f7203ecb9ac7279f19359e482df1b9c993fa2475819764a7f57f801a22dc?trk=share_certificate "https://www.linkedin.com/learning/certificates/4737f7203ecb9ac7279f19359e482df1b9c993fa2475819764a7f57f801a22dc?trk=share_certificate")  
+      - name: Transition from Java to Go - [Certificate](https://www.linkedin.com/learning/certificates/20fb3004133f2e7950121073dd5e0bd40905ab0f6cde91ce3907eab748f375e7?trk=share_certificate "https://www.linkedin.com/learning/certificates/20fb3004133f2e7950121073dd5e0bd40905ab0f6cde91ce3907eab748f375e7?trk=share_certificate")  
+      - name: Unit Testing in Go - [Certificate](https://www.linkedin.com/learning/certificates/76082d284660f6d0a29ff0c4202906341b3dab5e91cabddd27976af370d41a0a?trk=share_certificate "https://www.linkedin.com/learning/certificates/76082d284660f6d0a29ff0c4202906341b3dab5e91cabddd27976af370d41a0a?trk=share_certificate")  
+
+      - name: Master Python - [Certificate](https://www.linkedin.com/learning/certificates/e6f0098398504961aacc48eebf8166f72edc84c4d4253d91434b32edb19c733e?trk=share_certificate "https://www.linkedin.com/learning/certificates/e6f0098398504961aacc48eebf8166f72edc84c4d4253d91434b32edb19c733e?trk=share_certificate")  
+      - name: Python Advanced - [Certificate](https://www.linkedin.com/learning/certificates/c86fd60132b4f138eee77af4672174affc7a382c21d4cecf3ca25141b5006f15?trk=share_certificate "https://www.linkedin.com/learning/certificates/c86fd60132b4f138eee77af4672174affc7a382c21d4cecf3ca25141b5006f15?trk=share_certificate")  
+      - name: Python Advanced 2 - [Certificate](https://www.linkedin.com/learning/certificates/3883043a44a49e7877edecb61d670aee1d4f08a1c295d872fcd6f3171d51d4c8?trk=share_certificate "https://www.linkedin.com/learning/certificates/3883043a44a49e7877edecb61d670aee1d4f08a1c295d872fcd6f3171d51d4c8?trk=share_certificate")  
+      - name: Python Essential Training - [Certificate](https://www.linkedin.com/learning/certificates/6e47bc92f149c0b8f5bd4b3ca36ea8333969157d4253d19aa91694b72d68a8fc?trk=share_certificate "https://www.linkedin.com/learning/certificates/6e47bc92f149c0b8f5bd4b3ca36ea8333969157d4253d19aa91694b72d68a8fc?trk=share_certificate")  
+      - name: Python: Common mistakes and how to fix them - [Certificate](https://www.linkedin.com/learning/certificates/ea39247eb38711ae4617abf472e0a10a6e7b5cfb305a8c8493f692845f3e7655?trk=share_certificate "https://www.linkedin.com/learning/certificates/ea39247eb38711ae4617abf472e0a10a6e7b5cfb305a8c8493f692845f3e7655?trk=share_certificate")  
+
+      - name: 8 Git Commands You Should Know - [Certificate](https://www.linkedin.com/learning/certificates/22d5e0cfc7d5ec224627e5abb7bf2778ba543fad30ffd6b394e0baaaacb65f1f?trk=share_certificate "https://www.linkedin.com/learning/certificates/22d5e0cfc7d5ec224627e5abb7bf2778ba543fad30ffd6b394e0baaaacb65f1f?trk=share_certificate")  
+      - name: Ditch Your Git GUI. Customize Terminal - [Certificate](https://www.linkedin.com/learning/certificates/895fbd900a79f9978e81c76f45a5d99cec2cf498b8bb1f79751495afcb5a9bfa?trk=share_certificate "https://www.linkedin.com/learning/certificates/895fbd900a79f9978e81c76f45a5d99cec2cf498b8bb1f79751495afcb5a9bfa?trk=share_certificate")  
+      - name: GitHub Quick Tips - [Certificate](https://www.linkedin.com/learning/certificates/234aa09d6b8805faed7d656618bc9aaaae05d8bd9c779c95f33ec239f6350d68?trk=share_certificate "https://www.linkedin.com/learning/certificates/234aa09d6b8805faed7d656618bc9aaaae05d8bd9c779c95f33ec239f6350d68?trk=share_certificate")  
+      - name: Git Github todo un sistema de control de versiones desde cero - [Certificate](https://www.udemy.com/certificate/UC-d83cd3f6-47bc-4d79-936e-53355bb64d31 "https://www.udemy.com/certificate/UC-d83cd3f6-47bc-4d79-936e-53355bb64d31")  
+      - name: Como implementar GitFlow en Gitlab y Github - [Certificate](https://www.udemy.com/certificate/UC-f6ac02a8-16af-4120-afc9-739d9ada2e54 "https://www.udemy.com/certificate/UC-f6ac02a8-16af-4120-afc9-739d9ada2e54")  
+      - name: Curso de Git y Github_ GIT PROFESIONAL desde cero - [Certificate](https://www.udemy.com/certificate/UC-a2ef4e14-ea3e-40ac-a3ce-7931e10248d7 "https://www.udemy.com/certificate/UC-a2ef4e14-ea3e-40ac-a3ce-7931e10248d7")  
+      - name: Master GitHub Copilot - [Certificate](https://www.linkedin.com/learning/certificates/f36268c22f7484974d855057963c23593c9535c9a175b27298cabfc1ad80b00e?trk=share_certificate "https://www.linkedin.com/learning/certificates/f36268c22f7484974d855057963c23593c9535c9a175b27298cabfc1ad80b00e?trk=share_certificate")  
+
+      - name: Advanced Design Patterns. Design Principles - [Certificate](https://www.linkedin.com/learning/certificates/1fc922d1923ccb115ddfb50314b681c7d65df2159c931ecd7ecdcfdfd5bad2f5?trk=share_certificate "https://www.linkedin.com/learning/certificates/1fc922d1923ccb115ddfb50314b681c7d65df2159c931ecd7ecdcfdfd5bad2f5?trk=share_certificate")  
+      - name: AWS Certified Cloud Practitioner (CLF-C02) Cert Prep - [Certificate](https://www.linkedin.com/learning/certificates/2a6e2bc45a9ef7d6d3d88e561ef7fb9fa79ade28e67c06c466a9166f696adec4?trk=share_certificate "https://www.linkedin.com/learning/certificates/2a6e2bc45a9ef7d6d3d88e561ef7fb9fa79ade28e67c06c466a9166f696adec4?trk=share_certificate")  
+      - name: Azure Functions Essential Training (2019) - [Certificate](https://www.linkedin.com/learning/certificates/feab6030c4dfdbbe181a8bb7ccb4c12bb7434f52171e20ddc5b0d8af45c71cdd?trk=share_certificate "https://www.linkedin.com/learning/certificates/feab6030c4dfdbbe181a8bb7ccb4c12bb7434f52171e20ddc5b0d8af45c71cdd?trk=share_certificate")  
+      - name: Azure: NoSQL development with CosmoDB - [Certificate](https://www.linkedin.com/learning/certificates/61468df566738ef01d5c2624e208a06ba3d93afc3eec95902b3f33132a84f346?trk=share_certificate "https://www.linkedin.com/learning/certificates/61468df566738ef01d5c2624e208a06ba3d93afc3eec95902b3f33132a84f346?trk=share_certificate")  
+      - name: Design Patterns: Creational - [Certificate](https://www.linkedin.com/learning/certificates/4a32fdceda22f8653aedaaddc8a6fddbe71dbfac311c83d2daeba5e13a92c26c?trk=share_certificate "https://www.linkedin.com/learning/certificates/4a32fdceda22f8653aedaaddc8a6fddbe71dbfac311c83d2daeba5e13a92c26c?trk=share_certificate")  
+      - name: Master Apache Kafka - [Certificate](https://www.linkedin.com/learning/certificates/7812b3c0517285de45a2ce95a1f62b4a1958e77b42f6b0cef74d5ece93bfd2c0?trk=share_certificate "https://www.linkedin.com/learning/certificates/7812b3c0517285de45a2ce95a1f62b4a1958e77b42f6b0cef74d5ece93bfd2c0?trk=share_certificate")  
+      - name: Programming Foundations: API and Web Services - [Certificate](https://www.linkedin.com/learning/certificates/6b91fc1598bd103aab29fd1b2ad7e9f864e6ac75cda3408f91f62f903da11405?trk=share_certificate "https://www.linkedin.com/learning/certificates/6b91fc1598bd103aab29fd1b2ad7e9f864e6ac75cda3408f91f62f903da11405?trk=share_certificate")  
+      - name: Software Architecture: Creating Sustainable Systems Essential Training – [Certificate](https://www.linkedin.com/learning/certificates/3f25b39f4d90ca66750d1c57cecea518f4a6a4ae65717f531d2de46ff9e58bd8?trk=share_certificate "https://www.linkedin.com/learning/certificates/3f25b39f4d90ca66750d1c57cecea518f4a6a4ae65717f531d2de46ff9e58bd8?trk=share_certificate")  
+      - name: Apache Kafka con Java, Spring framework y AWS - [Certificate](https://www.udemy.com/certificate/UC-59dd802f-2d2f-41a5-bd10-f4fc7dad302b "https://www.udemy.com/certificate/UC-59dd802f-2d2f-41a5-bd10-f4fc7dad302b")  
+      - name: Arquitectura Software Moderna DDD, Eventos, Microservicios - [Certificate](https://www.udemy.com/certificate/UC-b4f1c669-5ffc-47e3-9cd9-160f2859de55 "https://www.udemy.com/certificate/UC-b4f1c669-5ffc-47e3-9cd9-160f2859de55")  
+      - name: Big Data y Spark_ ingenieria de datos con Python y pyspark - [Certificate](https://www.udemy.com/certificate/UC-d511a447-abd7-406b-bc3d-889104e0058c "https://www.udemy.com/certificate/UC-d511a447-abd7-406b-bc3d-889104e0058c")  
+      - name: Snowflake - The Complete Masterclass - [Certificate](https://www.udemy.com/certificate/UC-c7532513-d4b8-46cd-b143-93104a15f6f4 "https://www.udemy.com/certificate/UC-c7532513-d4b8-46cd-b143-93104a15f6f4")  
+
+      - name: Docker de principiante a experto - [Certificate](https://www.udemy.com/certificate/UC-35ddb35f-ae8d-4334-80d1-a23e359eaafc "https://www.udemy.com/certificate/UC-35ddb35f-ae8d-4334-80d1-a23e359eaafc")  
+      - name: Kubernetas para desarrolladores - [Certificate](https://www.udemy.com/certificate/UC-b18d69ae-b052-4ff5-b118-a3e19e70ce9b "https://www.udemy.com/certificate/UC-b18d69ae-b052-4ff5-b118-a3e19e70ce9b")  
+      - name: Working with Docker - OCI Containers using Podman - [Certificate](https://www.udemy.com/certificate/UC-9befbd03-4e8a-47cf-9550-c1d699677bfc "https://www.udemy.com/certificate/UC-9befbd03-4e8a-47cf-9550-c1d699677bfc")  
+
+      - name: SOLID and Clean Code Principles- [Certificate](https://www.udemy.com/certificate/UC-5560d01b-f30f-485c-9710-b045018a94e8 "https://www.udemy.com/certificate/UC-5560d01b-f30f-485c-9710-b045018a94e8")  
+
+
+
+
+
+ - name:  - name: -     # - name: Quantum Computing
+      #   date: 2018-01-01
+      #   issuer: Stanford University
+      #   icon: fa-solid fa-tag
+
+      # - name: Quantum Information
+      #   date: 2018-01-01
+      #   issuer: Stanford University
+      #   icon: fa-solid fa-envelope
+
+    # Projects:
+    #   - name: Quantum Computing
+    #     summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
+    #     highlights:
+    #       - Quantum Teleportation
+    #       - Quantum Cryptography
+    #     start_date: 2018-01-01
+    #     end_date: 2018-01-01
+
+    # References:
+    #   - name: Professor John Doe
+    #     icon: fa-solid fa-laptop
+    #     reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+
+    #   - name: Professor Jane Smith
+    #     icon: fa-solid fa-thumbtack
+    #     reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
