@@ -54,14 +54,14 @@ cv:
         location: Madrid, Spain
         start_date: 2026-03
         end_date: ...
-        summary: ...
+        summary: 
         # highlights:
         #   - Relativity
         #   - Description 2.
 
       - company: InAtlas S.L.
         position: Senior Software Engineer
-        location: Madrid, Spain
+        location: Madrid, Spain (Remote 100%)
         start_date: 2023-12
         end_date: 2026-01
         summary: I have developed and evolved several REST based microservices and a monotlith which is being converted into other services, extracting the security core and other parts as the reporting logic. 
@@ -275,7 +275,7 @@ cv:
         issuer: LinkedIn Learning
       - name: Test-Driven Development in Spring Boot with JUnit and Mockito - [Certificate](https://www.linkedin.com/learning/certificates/7bc5acd1c9587aa4045800eff852a3ba6eb690d67bc436234dd286eec781adc8?trk=share_certificate "https://www.linkedin.com/learning/certificates/7bc5acd1c9587aa4045800eff852a3ba6eb690d67bc436234dd286eec781adc8?trk=share_certificate")  
         issuer: LinkedIn Learning
-      - name: Go Practice Functions - [Certificate](https://www.linkedin.com/learning/certificates/011955cc24a696009558d61652dec98e6b9c67f904ea02163031da3e86bbfb02?trk=share_certificate "https://www.linkedin.com/learning/certificates/011955cc24a696009558d61652dec98e6b9c67f904ea02163031da3e86bbfb02?trk=share_certificate")  
+      - name: Go Practice: Functions - [Certificate](https://www.linkedin.com/learning/certificates/011955cc24a696009558d61652dec98e6b9c67f904ea02163031da3e86bbfb02?trk=share_certificate "https://www.linkedin.com/learning/certificates/011955cc24a696009558d61652dec98e6b9c67f904ea02163031da3e86bbfb02?trk=share_certificate")  
         issuer: LinkedIn Learning
       - name: Go Standard Library - [Certificate](https://www.linkedin.com/learning/certificates/4737f7203ecb9ac7279f19359e482df1b9c993fa2475819764a7f57f801a22dc?trk=share_certificate "https://www.linkedin.com/learning/certificates/4737f7203ecb9ac7279f19359e482df1b9c993fa2475819764a7f57f801a22dc?trk=share_certificate")  
         issuer: LinkedIn Learning
@@ -344,7 +344,7 @@ cv:
 
 
 
-      # - name: Quantum Computing
+ - name:  - name: -     # - name: Quantum Computing
       #   date: 2018-01-01
       #   issuer: Stanford University
       #   icon: fa-solid fa-tag

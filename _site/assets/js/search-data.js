@@ -37,9 +37,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
-        },{id: "nav-cv",
-          title: "CV",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+        },{id: "nav-curriculum-vitae",
+          title: "Curriculum Vitae",
+          description: "This is a description of my professional background. You can download my CV in PDF format here in [English](/assets/pdf/CV Miguel Ángel Medina - EN.pdf) or in [Spanish](/assets/pdf/CV Miguel Ángel Medina - ES.pdf).",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";

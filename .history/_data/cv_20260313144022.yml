@@ -54,14 +54,14 @@ cv:
         location: Madrid, Spain
         start_date: 2026-03
         end_date: ...
-        summary: ...
+        summary: 
         # highlights:
         #   - Relativity
         #   - Description 2.
 
       - company: InAtlas S.L.
         position: Senior Software Engineer
-        location: Madrid, Spain
+        location: Madrid, Spain (Remote 100%)
         start_date: 2023-12
         end_date: 2026-01
         summary: I have developed and evolved several REST based microservices and a monotlith which is being converted into other services, extracting the security core and other parts as the reporting logic. 
@@ -344,7 +344,7 @@ cv:
 
 
 
-      # - name: Quantum Computing
+ - name:  - name: -     # - name: Quantum Computing
       #   date: 2018-01-01
       #   issuer: Stanford University
       #   icon: fa-solid fa-tag
