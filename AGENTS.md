@@ -77,5 +77,5 @@ When modifying `_config.yml`, these **must be updated together**:
 For troubleshooting, see:
 
 - [Common Pitfalls & Workarounds](.github/copilot-instructions.md#common-pitfalls--workarounds) in copilot-instructions.md
-- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for detailed solutions
+- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for detailed solutions.
 - [GitHub Issues](https://github.com/alshedivat/al-folio/issues) to search for your specific problem.
