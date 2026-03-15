@@ -6,7 +6,4 @@ repo_description_lines_max: 2
 
 github_repos:
   - mediagui/VibeCoded-JavaIAExample
-  - mediagui/JavaIAExample
-  - mediagui/Go
-  - mediagui/CQRS
-  - mediagui/cofee
+  - 

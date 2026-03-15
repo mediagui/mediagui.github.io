@@ -30,7 +30,7 @@ on:
       - "!FAQ.md"
       - "!INSTALL.md"
       - "!README.md"
-      - "!.history/**"
+        - "!.history/**"
   pull_request:
     branches:
       - master
@@ -60,7 +60,7 @@ on:
       - "!FAQ.md"
       - "!INSTALL.md"
       - "!README.md"
-      - "!.history/**"
+        - "!.history/**"
   workflow_dispatch:
 
 permissions:
