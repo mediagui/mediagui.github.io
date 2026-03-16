@@ -451,4 +451,4 @@ If you're stuck:
 
 1. Checking `url` and `baseurl` in `_config.yml`
 2. Clearing browser cache
-3. Waiting for GitHub Actions to complete (~5 minutes)
+3. Waiting for GitHub Actions to complete (~5 minutes).
