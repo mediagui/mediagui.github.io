@@ -99,6 +99,7 @@ jobs:
             [ -n "$MAGICK_BIN" ] && sudo ln -sf "$MAGICK_BIN" /usr/local/bin/convert
           fi
           pip3 install --upgrade nbconvert jupyter
+          bundle install
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
