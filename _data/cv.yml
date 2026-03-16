@@ -1,10 +1,8 @@
 cv:
   name: Miguel Angel Medina
-  label: Software Engineer
+  headline: Software Engineer
   email: mediagui@gmail.com
   location: Madrid, Spain
-  image: ""
-  summary: Software engineer with over 20 years of experience in Java (backend) development, specialized in Spring Boot and JPA/Hibernate, now also proficient in Golang and relational databases such as PostgreSQL, as well as cloud environments like Snowflake. I have designed and maintained high-performance REST APIs, complex integrations, and scalable architectures for demanding production environments. I enjoy optimizing and improving code quality while applying solid architectural best practices. I’m currently focused on backend development and architecture projects.
 
   social_networks:
     - network: X
@@ -14,22 +12,18 @@ cv:
     - network: LinkedIn
       username: medinaaguilar
 
-  address:
-    street:
-    city: Madrid
-    # region: Madrid
-    # postalCode: 28025
-    countryCode: ES
-
   sections:
+    Summary:
+      - Software engineer with over 20 years of experience in Java backend development, specialized in Spring Boot and JPA/Hibernate, now also proficient in Go, PostgreSQL, and cloud environments such as Snowflake. I have designed and maintained high-performance REST APIs, complex integrations, and scalable architectures for demanding production environments. I focus on backend development, software architecture, code quality, and practical system improvements.
+
     Education:
       - institution: Universidad Nacional de Educación a Distancia
         location: Madrid, Spain
         url: https://www.uned.es/
         area: IT
-        studyType: Software Engineering
-        start_date: 2000
-        end_date: ...
+        degree: Software Engineering
+        start_date: "2000"
+        end_date: present
         # start_date: 1900
         # end_date: 1905
         # score: ""
@@ -41,9 +35,9 @@ cv:
       - institution: CENEC Formación - Virgen de la Paloma (Vocational Training Center)
         location: Madrid, Spain
         area: IT
-        studyType: Technical Degree in Computer Systems
-        start_date: 1995
-        end_date: 1997
+        degree: Technical Degree in Computer Systems
+        start_date: "1995"
+        end_date: "1997"
         # highlights:
         #   - Description 1.
         #   - Description 2.
@@ -53,8 +47,7 @@ cv:
         position: Senior Software Engineer
         location: Madrid, Spain
         start_date: 2026-03
-        end_date: ...
-        summary: ...
+        end_date: present
         # highlights:
         #   - Relativity
         #   - Description 2.
@@ -112,8 +105,8 @@ cv:
       - company: TCS (Tata Consultancy Services)
         position: Functional Analyst/Developer
         location: Madrid, Spain
-        start_date: 2012
-        end_date: 2017
+        start_date: "2012"
+        end_date: "2017"
         summary: Complete analysis, design and implementation of enterprise projects. Responsible for enhancements and maintenance of different projects.
         highlights:
           - Design and implementation of enterprise CI/CD system using Jenkins + SonarQube + Maven + Archiva + SVN
@@ -123,8 +116,8 @@ cv:
       - company: Madrid City Council (IT Department - IAM)
         position: Head of IT Division
         location: Madrid, Spain
-        start_date: 2004
-        end_date: 2012
+        start_date: "2004"
+        end_date: "2012"
         summary: In charge of the IT division of the Madrid City Council, responsible for the design and implementation of the IT strategy and architecture of the city council. Responsible for the management of a team of 20+ people. Responsible for the design and migration of legacy systems to modern Java and Spring architecture.
         highlights:
           - RPT Vista Software. Tool used search and query economic/professional data from 10,000+ employees (nowadays still in production).
@@ -134,8 +127,8 @@ cv:
       - company: Alfa Multimedia
         position: Functional Analyst/Developer
         location: Madrid, Spain
-        start_date: 2000
-        end_date: 2004
+        start_date: "2000"
+        end_date: "2004"
         summary: Analysis, development and implementation of medical management solutions. In charge of the network infrastructure of the company. Responsible for the design and implementation of the IT strategy and architecture of the company. Responsible for the management of a team of 5+ people. Responsible for the design and migration of legacy systems to modern Java and Spring architecture.
         highlights:
           - Medical office management software (GestMed). Deployed in 15+ clinics. Management software for Medical Associations from analysis to operational support.
