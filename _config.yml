@@ -15,7 +15,7 @@ footer_text: >
 keywords: Technical Lead, Senior Backend Engineer, Java, Spring Boot, PostgreSQL, Snowflake, API First, API design, Cloud Architecture, AWS, Azure, Design patterns # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 # icon:  ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
-icon:  /assets/img/favicon.ico # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon:  favicon.ico # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 # url: http://mediagui.github.io # the base hostname & protocol for your site
 url: https://www.miguelangelmedina.es # the base hostname & protocol for your site
