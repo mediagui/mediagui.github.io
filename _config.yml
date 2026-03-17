@@ -2,9 +2,9 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Miguel Á. <br/> Medina Aguilar # the website title (if blank, full name will be used instead)
-first_name: Miguel
-middle_name: Ángel
+title: Miguel Ángel Medina Aguilar # the website title (if blank, full name will be used instead)
+first_name: Miguel Ángel
+middle_name:
 last_name: Medina Aguilar
 contact_note: # You can even add a little note about which of these is the best way to reach you.
 description:
