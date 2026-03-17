@@ -6,6 +6,6 @@ nav: true
 nav_order: 1
 cv_pdf: /assets/pdf/CV Miguel Ángel Medina - EN.pdf # you can also use external links here
 cv_format: rendercv # options: rendercv, jsonresume
-description: This is a description of my professional background. You can download my CV in PDF format clicking on the  icon.
+description: This is a description of my professional background and skills. You can download my CV in PDF format clicking on the icon.
 sidebar: left
 ---
