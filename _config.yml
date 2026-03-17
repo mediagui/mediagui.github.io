@@ -156,13 +156,13 @@ collections:
   books:
     output: true
   news:
-    defaults:
-      layout: post
-    output: true
+  #   defaults:
+  #     layout: true
+  #   output: false
   projects:
-    output: true
+  #   output: true
   teachings:
-    output: true
+  #   output: true
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
