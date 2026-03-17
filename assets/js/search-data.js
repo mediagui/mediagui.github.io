@@ -30,8 +30,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
-        },{id: "nav-cv",
-          title: "CV",
+        },{id: "nav-curriculum-vitae",
+          title: "curriculum vitae",
           description: "This is a description of my professional background. You can download my CV in PDF format clicking on the  icon.",
           section: "Navigation",
           handler: () => {
@@ -400,11 +400,11 @@ ninja.data = [{
             window.location.href = "/blog/2015/formatting-and-links/";
           
         },
-      },{id: "books-the-godfather",
-          title: 'The Godfather',
+      },{id: "books-learning-go-an-idiomatic-approach-to-real-world-go-programming",
+          title: 'Learning Go. An Idiomatic Approach to Real-World Go Programming',
           description: "",
           section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
+              window.location.href = "/books/learning_go/";
             },},{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
