@@ -16,12 +16,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/books/";
           },
-        },{id: "nav-blog",
-          title: "blog",
-          description: "",
+        },{id: "nav-curriculum-vitae",
+          title: "curriculum vitae",
+          description: "This is a description of my professional background. You can download my CV in PDF format clicking on the  icon.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/blog/";
+            window.location.href = "/cv/";
           },
         },{id: "nav-repositories",
           title: "repositories",
@@ -30,12 +30,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
-        },{id: "nav-curriculum-vitae",
-          title: "curriculum vitae",
-          description: "This is a description of my professional background. You can download my CV in PDF format clicking on the  icon.",
+        },{id: "nav-blog",
+          title: "blog",
+          description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/cv/";
+            window.location.href = "/blog/";
           },
         },{id: "post-a-post-with-plotly-js",
         
