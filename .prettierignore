@@ -20,3 +20,11 @@ _site/**
 assets/js/distillpub/**
 # Ignore third-party and generated Liquid templates
 _includes/distill_scripts.liquid
+AGENTS.md
+ANALYTICS.md
+CLAUDE.md
+CONTRIBUTING.md
+CUSTOMIZE.md
+INSTALL.md
+QUICKSTART.md
+README.md
