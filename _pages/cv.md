@@ -1,7 +1,7 @@
 ---
 layout: cv
 permalink: /cv/
-title: CV
+title: curriculum vitae
 nav: true
 nav_order: 5
 cv_pdf: /assets/pdf/CV Miguel Ángel Medina - EN.pdf # you can also use external links here
