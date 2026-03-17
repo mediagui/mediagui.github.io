@@ -1,10 +1,9 @@
 ---
 layout: cv
 permalink: /cv/
-title: curriculum vitae
+title: CV
 nav: true
-# nav_order: 5
-nav_order: 3
+nav_order: 5
 cv_pdf: /assets/pdf/CV Miguel Ángel Medina - EN.pdf # you can also use external links here
 cv_format: rendercv # options: rendercv, jsonresume
 description: This is a description of my professional background. You can download my CV in PDF format clicking on the  icon.
