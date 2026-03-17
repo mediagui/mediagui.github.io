@@ -13,7 +13,7 @@ started: 2026-01-28
 finished: 2026-03-01
 released: 2024
 stars: 5
-goodreads_review:
+goodreads_review: 55841848-learning-go
 status: Finished
 ---
 
