@@ -3,7 +3,7 @@ layout: book-review
 title: Programación en GO.
 author: Mario Macías LLoret
 cover:
-olid: OL47531442M   # use Open Library ID to fetch cover (if no `cover` is provided) (https://openlibrary.org/search?q=programaci%C3%B3n+en+go&mode=everything)
+olid: OL47531442M # use Open Library ID to fetch cover (if no `cover` is provided) (https://openlibrary.org/search?q=programaci%C3%B3n+en+go&mode=everything)
 isbn: 978-8426734495 # use ISBN to fetch cover (if no `olid` is provided, dashes are optional)
 categories: Go, Programming, Software Development
 tags: top-100

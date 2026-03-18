@@ -27,12 +27,11 @@ status: Finished
 
 - **From Amazon**:
 
-    Go has rapidly become the preferred language for building web services. Plenty of tutorials are available to teach Go's syntax to developers with experience in other programming languages, but tutorials aren't enough. They don't teach Go's idioms, so developers end up recreating patterns that don't make sense in a Go context. This practical guide provides the essential background you need to write clear and idiomatic Go.
+  Go has rapidly become the preferred language for building web services. Plenty of tutorials are available to teach Go's syntax to developers with experience in other programming languages, but tutorials aren't enough. They don't teach Go's idioms, so developers end up recreating patterns that don't make sense in a Go context. This practical guide provides the essential background you need to write clear and idiomatic Go.
 
-    No matter your level of experience, you'll learn how to think like a Go developer. Author Jon Bodner introduces the design patterns experienced Go developers have adopted and explores the rationale for using them. This updated edition also shows you how Go's generics support fits into the language.
+  No matter your level of experience, you'll learn how to think like a Go developer. Author Jon Bodner introduces the design patterns experienced Go developers have adopted and explores the rationale for using them. This updated edition also shows you how Go's generics support fits into the language.
 
-    _This book will help you in:_
-
+  _This book will help you in:_
   - Write idiomatic code in Go and design a Go project
   - Understand the reasons behind Go's design decisions
   - Set up a Go development environment for a solo developer or team
