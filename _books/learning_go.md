@@ -5,15 +5,15 @@ author: Jon Bodner
 cover:
 olid: OL37179008M # use Open Library ID to fetch cover (if no `cover` is provided)
 isbn: 978-1098139292 # use ISBN to fetch cover (if no `olid` is provided, dashes are optional)
-categories: Go, Programming, Software Development
-tags: top-100
+categories: Go, Programming, 'Software Development'
+tags: top-5
 buy_link: https://www.amazon.es/Learning-Go-Idiomatic-Real-World-Programming/dp/1098139291
 date: 2026-03-17
 started: 2026-01-28
 finished: 2026-03-01
 released: 2024
 stars: 5
-goodreads_review: 55841848-learning-go
+goodreads_review: 8447478512
 status: Finished
 ---
 
