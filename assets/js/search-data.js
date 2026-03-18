@@ -379,7 +379,7 @@ ninja.data = [{
           
         },
       },{id: "books-programación-en-go",
-          title: 'Programación en GO.',
+          title: 'Programación en GO',
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/programacion_en_go/";
