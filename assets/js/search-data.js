@@ -378,7 +378,12 @@ ninja.data = [{
             window.location.href = "/blog/2015/formatting-and-links/";
           
         },
-      },{id: "books-learning-go-an-idiomatic-approach-to-real-world-go-programming",
+      },{id: "books-programación-en-go",
+          title: 'Programación en GO.',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/programacion_en_go/";
+            },},{id: "books-learning-go-an-idiomatic-approach-to-real-world-go-programming",
           title: 'Learning Go. An Idiomatic Approach to Real-World Go Programming',
           description: "",
           section: "Books",handler: () => {
