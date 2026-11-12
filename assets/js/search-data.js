@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/books/";
           },
-        },{id: "post-a-post-with-plotly-js",
+        },{id: "post-codex-multi-provider-free-proxy",
+        
+          title: "Codex Multi-Provider Free Proxy",
+        
+        description: "How to create a custom proxy for Open Router to use free IA Models",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/codex-multi-provider-free-proxy/";
+          
+        },
+      },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
         
