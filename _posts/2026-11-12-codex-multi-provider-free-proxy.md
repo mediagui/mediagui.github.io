@@ -301,12 +301,12 @@ La disponibilidad, las cuotas y los límites efectivos dependen de la cuenta y p
 
 ## Endpoints
 
-| Endpoint | Método | Descripción |
-| --- | --- | --- |
-| `/health` | GET | Estado del proxy |
-| `/v1/models` | GET | Catálogo de modelos |
-| `/v1/responses` | POST | Responses API compatible con Codex |
-| `/v1/chat/completions` | POST | Chat Completions |
+| Endpoint               | Método | Descripción                        |
+| ---------------------- | ------ | ---------------------------------- |
+| `/health`              | GET    | Estado del proxy                   |
+| `/v1/models`           | GET    | Catálogo de modelos                |
+| `/v1/responses`        | POST   | Responses API compatible con Codex |
+| `/v1/chat/completions` | POST   | Chat Completions                   |
 
 ## Prueba de Responses API
 
