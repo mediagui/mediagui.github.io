@@ -13,7 +13,7 @@
 **Core Technologies:**
 
 - **Jekyll:** v4.x (Ruby static site generator)
-- **Ruby:** 3.3.5 (primary CI/CD version), 3.2.2 (some workflows)
+- **Ruby:** 3.3.5 (primary CI/CD version), 3.2.11 (some workflows)
 - **Python:** 3.13 (for nbconvert, jupyter notebook support)
 - **Node.js:** Latest (for purgecss and prettier)
 - **Docker:** Uses prebuilt image `amirpourmand/al-folio:v0.16.3` (Ruby slim-based)
