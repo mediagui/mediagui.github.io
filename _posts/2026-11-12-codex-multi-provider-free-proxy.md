@@ -7,13 +7,13 @@ tags: IA
 categories: IA
 ---
 
-# Codex Multi-Provider Free Proxy
+## Codex Multi-Provider Free Proxy
 
 Proxy local compatible con la API de OpenAI Responses, diseñado para conectar Codex CLI con modelos gratuitos de OpenRouter y, opcionalmente, Groq.
 
 Permite centralizar la selección de modelos, gestionar varias API keys, aplicar mecanismos de recuperación ante errores y adaptar las peticiones de Codex a las APIs de los proveedores.
 
-> **Versión documentada:** 3.4.0  
+> **Versión documentada:** 3.4.0
 > **Estado:** compilación y pruebas simuladas realizadas. No se garantiza la compatibilidad de todas las peticiones sin validación real con las cuentas de los proveedores.
 
 ## Características
@@ -302,7 +302,7 @@ La disponibilidad, las cuotas y los límites efectivos dependen de la cuenta y p
 ## Endpoints
 
 | Endpoint | Método | Descripción |
-|---|---|---|
+| --- | --- | --- |
 | `/health` | GET | Estado del proxy |
 | `/v1/models` | GET | Catálogo de modelos |
 | `/v1/responses` | POST | Responses API compatible con Codex |
