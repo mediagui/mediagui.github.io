@@ -24,6 +24,7 @@ jobs:
   check:
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
@@ -63,13 +64,24 @@ jobs:
         uses: browser-actions/setup-chrome@c785b87e244131f27c9f19c1a33e2ead956ab7ce # v1
         with:
           chrome-version: ${{ env.CHROMIUM_VERSION }}
-      - name: Install chromedriver 🚗
-        run: |
-          npm install -g chromedriver@$CHROMIUM_VERSION
+      # npm 11 bloquea los scripts de instalación salvo que se permitan, y
+      # chromedriver los necesita para descargar su binario. /usr/local/share/man
+      # es de root en ubuntu-26.04, así que un `npm install -g` normal muere al
+      # enlazar las man pages (EACCES → exit 243); con un prefijo propio no se
+      # toca /usr/local.
       - name: Run axe 🪓
-        # https://github.com/dequelabs/axe-core-npm/tree/develop/packages/cli
+        timeout-minutes: 10
+        env:
+          NPM_CONFIG_PREFIX: ${{ github.workspace }}/.npm-global
         run: |
+          export PATH="$NPM_CONFIG_PREFIX/bin:$PATH"
+          mkdir -p "$NPM_CONFIG_PREFIX"
+          npm install -g --allow-scripts=chromedriver "chromedriver@${CHROMIUM_VERSION}"
           npm install -g @axe-core/cli
-          npm install -g http-server
-          http-server _site/ &
-          axe --chromedriver-path $(npm root -g)/chromedriver/bin/chromedriver http://localhost:8080/${{ github.event.inputs.url || env.URL }} --load-delay=1500 --exit
+          CHROMEDRIVER="$(npm root -g)/chromedriver/bin/chromedriver"
+          test -x "$CHROMEDRIVER"
+          python3 -m http.server 8080 --directory _site >/tmp/http-server.log 2>&1 &
+          SERVER=$!
+          trap 'kill $SERVER 2>/dev/null || true' EXIT
+          for _ in $(seq 1 20); do curl -fsS http://localhost:8080/ >/dev/null && break; sleep 0.5; done
+          axe --chromedriver-path "$CHROMEDRIVER" "http://localhost:8080/${{ github.event.inputs.url || env.URL }}" --load-delay=1500 --exit
