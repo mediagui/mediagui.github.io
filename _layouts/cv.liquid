@@ -15,8 +15,29 @@ layout: default
 
 <div class="post">
   <header class="post-header">
-    <h1 class="post-title">
+    <h1 class="post-title{% if page.cv_pdf or page.cv_pdf_es %} has-cv-pdf{% endif %}">
       {{ page.title }}
+      {% comment %}
+        El PDF en español se declara antes para que, al flotar ambos a la derecha,
+        el inglés quede a la izquierda. Cada icono lleva su idioma en superíndice:
+        dos iconos idénticos sin etiqueta no se distinguen.
+      {% endcomment %}
+      {% if page.cv_pdf_es %}
+        <a
+          {% if page.cv_pdf_es contains '://' %}
+            href="{{ page.cv_pdf_es }}"
+          {% else %}
+            href="{{ page.cv_pdf_es | relative_url }}"
+          {% endif %}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="float-right"
+          title="CV en español (PDF)"
+          aria-label="CV en español (PDF)"
+        >
+          <i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span class="cv-pdf-lang">ES</span>
+        </a>
+      {% endif %}
       {% if page.cv_pdf %}
         <a
           {% if page.cv_pdf contains '://' %}
@@ -27,8 +48,10 @@ layout: default
           target="_blank"
           rel="noopener noreferrer"
           class="float-right"
+          title="CV en inglés (PDF)"
+          aria-label="CV en inglés (PDF)"
         >
-          <i class="fa-solid fa-file-pdf"></i>
+          <i class="fa-solid fa-file-pdf" aria-hidden="true"></i><span class="cv-pdf-lang">EN</span>
         </a>
       {% endif %}
     </h1>
