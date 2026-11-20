@@ -13,13 +13,14 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
           fetch-depth: 0 # OR "2" -> To retrieve the preceding commit.
 
@@ -44,8 +45,24 @@ jobs:
           done
           rm gh-md-toc
 
-      - name: Commit changes
+      # main exige PR (ruleset "PR y checks obligatorios en main"), asi que la TOC
+      # se propone en una rama en vez de commitearse directamente a main.
+      - name: Propose the TOC update in a pull request
         if: steps.changed-files.outputs.any_changed == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v5.0.1
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7
         with:
-          commit_message: Auto update markdown TOC
+          # con PAT el PR dispara CI; con GITHUB_TOKEN no lo dispara y el admin
+          # lo fusiona con bypass. Ver seccion 8.3 del informe de auditoria.
+          token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
+          branch: chore/update-tocs
+          delete-branch: true
+          # gh-md-toc solo inserta la TOC en los .md de la raíz
+          add-paths: |
+            *.md
+          commit-message: "chore: auto update markdown TOC"
+          title: "chore: auto update markdown TOC"
+          body: |
+            Actualización automática de las tablas de contenido.
+
+            `main` exige PR, así que los cambios se proponen aquí en lugar de
+            commitearse directamente.
