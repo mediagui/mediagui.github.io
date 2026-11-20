@@ -2,6 +2,15 @@
  * Footer styles
  ******************************************************************************/
 
+/* Los enlaces del pie van dentro de una línea de texto: se subrayan para que se
+distingan sin depender del color (axe: link-in-text-block). */
+footer.fixed-bottom,
+footer.sticky-bottom {
+  a {
+    text-decoration: underline;
+  }
+}
+
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
   font-size: 0.75rem;

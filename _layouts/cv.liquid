@@ -14,7 +14,7 @@ layout: default
 {% endcomment %}
 
 <div class="post">
-  <header class="post-header">
+  <div class="post-header">
     <h1 class="post-title{% if page.cv_pdf or page.cv_pdf_es %} has-cv-pdf{% endif %}">
       {{ page.title }}
       {% comment %}
@@ -58,7 +58,7 @@ layout: default
     {% if page.description %}
       <p class="post-description">{{ page.description }}</p>
     {% endif %}
-  </header>
+  </div>
 
   <article>
     <div class="cv">
