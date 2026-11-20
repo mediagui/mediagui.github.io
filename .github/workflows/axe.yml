@@ -63,7 +63,7 @@ jobs:
       # Chrome del sistema (/opt/google/chrome) y con majors distintas falla con
       # "session not created".
       - name: Run axe 🪓
-        timeout-minutes: 10
+        timeout-minutes: 15
         env:
           NPM_CONFIG_PREFIX: ${{ github.workspace }}/.npm-global
         run: |
@@ -80,4 +80,19 @@ jobs:
           SERVER=$!
           trap 'kill $SERVER 2>/dev/null || true' EXIT
           for _ in $(seq 1 20); do curl -fsS http://localhost:8080/ >/dev/null && break; sleep 0.5; done
-          axe --chromedriver-path "$CHROMEDRIVER" "http://localhost:8080/${{ github.event.inputs.url || env.URL }}" --load-delay=1500 --exit
+          # Con el input `url` se audita solo esa página; sin él, las principales.
+          # Cada página se audita aunque la anterior falle, para verlas todas de
+          # una vez, y el paso termina en rojo si alguna tiene violaciones.
+          INPUT_URL="${{ github.event.inputs.url || env.URL }}"
+          if [ -n "$INPUT_URL" ]; then
+            PAGES=("$INPUT_URL")
+          else
+            PAGES=("" "cv/" "blog/" "books/" "publications/")
+          fi
+          FAILED=0
+          for page in "${PAGES[@]}"; do
+            echo "::group::axe /${page}"
+            axe --chromedriver-path "$CHROMEDRIVER" "http://localhost:8080/${page}" --load-delay=1500 --exit || FAILED=1
+            echo "::endgroup::"
+          done
+          exit "$FAILED"
