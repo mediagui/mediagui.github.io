@@ -473,11 +473,18 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/medinaaguilar", "_blank");
         },
       },{
-        id: 'social-cv',
-        title: 'CV',
+        id: 'social-cv-en',
+        title: 'CV en inglés (PDF)',
         section: 'Socials',
         handler: () => {
           window.open("/assets/pdf/CV%20Miguel%20%C3%81ngel%20Medina%20-%20EN.pdf", "_blank");
+        },
+      },{
+        id: 'social-cv-es',
+        title: 'CV en español (PDF)',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/CV%20Miguel%20%C3%81ngel%20Medina%20-%20ES.pdf", "_blank");
         },
       },{
         id: 'social-email',
