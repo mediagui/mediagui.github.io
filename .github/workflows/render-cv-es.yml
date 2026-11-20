@@ -1,0 +1,121 @@
+name: Render the Spanish CV
+
+# Genera assets/pdf/CV Miguel Ángel Medina - ES.pdf a partir de _data/cv-es.yml.
+# Mientras ese fichero no exista, el workflow no hace nada: no renderiza, no copia
+# y no toca los PDF servidos. La guarda es el primer paso y el resto depende de ella.
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - "_data/cv-es.yml"
+      - "assets/rendercv/settings-es.yaml"
+      - "assets/rendercv/locale-es.yaml"
+      - "assets/rendercv/design.yaml"
+      - "requirements.txt" # si cambia la versión de rendercv, el PDF se regenera
+      - "!.history/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+# Dos pushes seguidos reescribirían la misma rama y el segundo PR pisaría al primero:
+# se serializan en vez de cancelarse, para no perder la última versión.
+concurrency:
+  group: render-cv-es
+  cancel-in-progress: false
+
+jobs:
+  rendercv-es:
+    name: RenderCV (ES)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+
+      # Sin esta guarda el resto del job no se ejecuta: los PDF actuales
+      # (los de LibreOffice) se quedan como están y el workflow termina en verde.
+      - name: ¿Hay fuente en español? 🔍
+        id: source
+        run: |
+          if [ -f _data/cv-es.yml ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+            echo "_data/cv-es.yml encontrado: se renderiza el CV en español."
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "_data/cv-es.yml no existe: no se renderiza nada y no se toca ningún PDF."
+          fi
+
+      - name: Setup Python 🐍
+        if: steps.source.outputs.present == 'true'
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+
+      - name: Install RenderCV 💾
+        if: steps.source.outputs.present == 'true'
+        run: |
+          pip install -r requirements.txt
+
+      # Escribe en rendercv_output/, nunca directamente sobre assets/pdf/.
+      # --design y --locale-catalog van como flags a propósito: rendercv 2.8 ignora
+      # esas dos claves si vienen dentro del fichero de settings, y sin ellas el PDF
+      # saldría con el diseño por defecto y en inglés.
+      - name: RenderCV 🇪🇸
+        if: steps.source.outputs.present == 'true'
+        run: |
+          rendercv render _data/cv-es.yml \
+            --settings assets/rendercv/settings-es.yaml \
+            --design assets/rendercv/design.yaml \
+            --locale-catalog assets/rendercv/locale-es.yaml
+          rm -f assets/rendercv/rendercv_output/*_es.typ
+
+      # Solo se sobrescribe el PDF publicado si el render anterior dejó un PDF real.
+      - name: Publish the PDF where the site links it
+        if: steps.source.outputs.present == 'true'
+        run: |
+          # rendercv nombra el PDF con el 'name' del CV en Title_Snake_Case, no en
+          # mayúsculas: se busca por patrón para no depender de cómo se llame el autor.
+          src=$(find assets/rendercv/rendercv_output -maxdepth 1 -type f -iname "*_cv_es.pdf" | head -1)
+          if [ -z "$src" ] || [ ! -s "$src" ]; then
+            echo "::error::rendercv no generó ningún *_cv_es.pdf en assets/rendercv/rendercv_output/. Revisa 'name' en _data/cv-es.yml y los paths de settings-es.yaml. El PDF actual no se ha tocado."
+            exit 1
+          fi
+          cp "$src" "assets/pdf/CV Miguel Ángel Medina - ES.pdf"
+          echo "CV en español actualizado: assets/pdf/CV Miguel Ángel Medina - ES.pdf"
+
+      - name: Upload rendercv_output as an artifact
+        if: steps.source.outputs.present == 'true'
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        with:
+          name: RenderCV Output (ES)
+          path: assets/rendercv/rendercv_output
+
+      # main exige PR (ruleset "PR y checks obligatorios en main"), asi que los
+      # cambios generados se proponen en una rama en vez de empujarse a main.
+      - name: Propose the changes in a pull request
+        if: steps.source.outputs.present == 'true'
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7
+        with:
+          # con PAT el PR dispara CI; con GITHUB_TOKEN no lo dispara y el admin
+          # lo fusiona con bypass. Ver seccion 8.3 del informe de auditoria.
+          token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
+          branch: chore/render-cv-es
+          delete-branch: true
+          add-paths: |
+            assets/pdf/CV Miguel Ángel Medina - ES.pdf
+          commit-message: "chore: render the latest Spanish CV"
+          title: "chore: render the latest Spanish CV"
+          body: |
+            Actualización automática del PDF del CV en español generada por RenderCV.
+
+            Ojo: este PR **sustituye** el PDF que se venía editando a mano en
+            LibreOffice por el render de `_data/cv-es.yml`. Si el resultado no es
+            el documento que quieres publicar, cierra el PR y el PDF actual se
+            queda intacto.
+
+            `main` exige PR, así que los cambios se proponen aquí en lugar de
+            empujarse directamente.

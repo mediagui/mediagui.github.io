@@ -1,0 +1,20 @@
+# Settings del CV en español. Duplica settings.yaml a propósito: es el único sitio
+# donde se fijan los nombres de salida, y así el CV inglés no depende de este fichero.
+# Los paths son relativos a _data/cv-es.yml.
+#
+# OJO: rendercv 2.8 ignora las claves design y locale de este fichero (solo respeta
+# las rutas de salida). Por eso el workflow pasa --design y --locale-catalog como
+# flags; si los quitas de ahí, el PDF sale con el diseño por defecto y en inglés.
+settings:
+  render_command:
+    typst_path: ../assets/rendercv/rendercv_output/NAME_IN_SNAKE_CASE_CV_es.typ
+    pdf_path: ../assets/rendercv/rendercv_output/NAME_IN_SNAKE_CASE_CV_es.pdf
+    markdown_path: ../assets/rendercv/rendercv_output/NAME_IN_SNAKE_CASE_CV_es.md
+    html_path: ../assets/rendercv/rendercv_output/NAME_IN_SNAKE_CASE_CV_es.html
+    png_path: ../assets/rendercv/rendercv_output/NAME_IN_SNAKE_CASE_CV_es.png
+    dont_generate_markdown: true
+    dont_generate_html: true
+    dont_generate_typst: false # typst generation is required for pdf output
+    dont_generate_pdf: false
+    dont_generate_png: true
+  bold_keywords: []

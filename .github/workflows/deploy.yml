@@ -15,14 +15,10 @@ on:
       - "**.liquid"
       - "**/*.md"
       - "**.yml"
+      - ".well-known/**"
       - "Gemfile"
       - "Gemfile.lock"
       - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
       - "!.github/workflows/prettier.yml"
       - "!lighthouse_results/**"
       - "!CONTRIBUTING.md"
@@ -35,32 +31,7 @@ on:
     branches:
       - master
       - main
-    paths:
-      - "assets/**"
-      - "_sass/**"
-      - "_scripts/**"
-      - "**.bib"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!CONTRIBUTING.md"
-      - "!CUSTOMIZE.md"
-      - "!FAQ.md"
-      - "!INSTALL.md"
-      - "!README.md"
-      - "!.history/**"
+    # Sin filtro de rutas: la ruleset de main exige el check "deploy" en cada PR.
   workflow_dispatch:
 
 permissions:
@@ -74,24 +45,34 @@ jobs:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v5
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
       - name: Setup Ruby 💎
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@be3c7df29b3349ec6bcfc6b4792f1cf9f5237d18 # v1
         with:
           ruby-version: "3.3"
           bundler-cache: true
       - name: Setup Python 🐍
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: "3.13"
           cache: "pip" # caching pip dependencies
       - name: Update _config.yml ⚙️
-        uses: fjogeleit/yaml-update-action@main
-        with:
-          commitChange: false
-          valueFile: "_config.yml"
-          propertyPath: "giscus.repo"
-          value: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import os, pathlib, re
+          path = pathlib.Path("_config.yml")
+          out, in_giscus = [], False
+          for line in path.read_text(encoding="utf-8").splitlines():
+              if re.match(r"^giscus:\s*$", line):
+                  in_giscus = True
+              elif in_giscus and line and not line.startswith((" ", "\t")):
+                  in_giscus = False
+              if in_giscus and re.match(r"^\s+repo:\s*", line):
+                  line = "  repo: " + os.environ["GITHUB_REPOSITORY"] + " # set by CI"
+              out.append(line)
+          path.write_text("\n".join(out) + "\n", encoding="utf-8")
+          print("giscus.repo ->", os.environ["GITHUB_REPOSITORY"])
+          PY
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
@@ -110,6 +91,6 @@ jobs:
           purgecss -c purgecss.config.js
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@fa24774553152dd7873cd16ebd8d959b010c5445 # v4
         with:
           folder: _site
