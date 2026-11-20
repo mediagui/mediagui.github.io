@@ -97,6 +97,9 @@ jobs:
           mkdir -p _site/.well-known
           cp .well-known/security.txt _site/.well-known/security.txt
           test -s _site/.well-known/security.txt
+          # GitHub Pages vuelve a pasar el sitio por Jekyll y descarta lo que
+          # empieza por punto. .nojekyll sirve los ficheros tal cual.
+          touch _site/.nojekyll
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@fa24774553152dd7873cd16ebd8d959b010c5445 # v4
