@@ -32,7 +32,8 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@be3c7df29b3349ec6bcfc6b4792f1cf9f5237d18 # v1
         with:
-          ruby-version: "3.3.5"
+          # "3.3" en vez de "3.3.5": la imagen ubuntu-26.04 no tiene ese parche
+          ruby-version: "3.3"
           bundler-cache: true
 
       - name: Setup Python
