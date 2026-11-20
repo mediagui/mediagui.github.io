@@ -1,0 +1,19 @@
+// Iconos PDF del CV.
+// En pantallas estrechas los iconos flotan y, al no haber contexto de formato en
+// el h1, el párrafo de descripción se les enrolla alrededor y acaba debajo de
+// ellos. flow-root encierra los floats dentro del título.
+@media (max-width: 575.98px) {
+  .post-title.has-cv-pdf {
+    display: flow-root;
+  }
+}
+
+// Etiqueta de idioma de los dos iconos PDF del CV (EN / ES).
+// Va subordinada al icono: sin tamaño propio hereda el del h1 y compite con él.
+.cv-pdf-lang {
+  font-size: 0.35em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-left: 0.15em;
+  vertical-align: super;
+}
