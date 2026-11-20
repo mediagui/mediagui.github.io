@@ -123,6 +123,14 @@ ninja.data = [
           {%- assign social_id = "social-cv" -%}
           {%- assign social_title = "CV" -%}
           {%- capture social_url %}"{{ social[1] | relative_url }}"{% endcapture -%}
+        {%- when "cv_pdf_en" -%}
+          {%- assign social_id = "social-cv-en" -%}
+          {%- assign social_title = "CV en inglés (PDF)" -%}
+          {%- capture social_url %}"{{ social[1].url | relative_url }}"{% endcapture -%}
+        {%- when "cv_pdf_es" -%}
+          {%- assign social_id = "social-cv-es" -%}
+          {%- assign social_title = "CV en español (PDF)" -%}
+          {%- capture social_url %}"{{ social[1].url | relative_url }}"{% endcapture -%}
         {%- when "dblp_url" -%}
           {%- assign social_id = "social-dblp" -%}
           {%- assign social_title = "DBLP" -%}

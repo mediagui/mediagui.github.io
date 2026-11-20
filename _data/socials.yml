@@ -2,7 +2,16 @@
 # the socials will be displayed in the order they are defined here
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
 linkedin_username: medinaaguilar # your LinkedIn username (e.g., for https://www.linkedin.com/in/johndoe/, the username is johndoe)
-cv_pdf: /assets/pdf/CV Miguel Ángel Medina - EN.pdf # path to your CV PDF file
+# Los dos CV van como entradas personalizadas: la clave `cv_pdf` del plugin usa
+# siempre `title="Cv pdf"`, sin decir el idioma, y no admite título propio.
+cv_pdf_en:
+  logo: ai ai-cv
+  title: CV en inglés (PDF)
+  url: /assets/pdf/CV Miguel Ángel Medina - EN.pdf
+cv_pdf_es:
+  logo: fa-solid fa-file-pdf # icono distinto al ai-cv del inglés, para no ver dos iguales
+  title: CV en español (PDF)
+  url: /assets/pdf/CV Miguel Ángel Medina - ES.pdf
 email: mediagui@gmail.com # your email address
 # inspirehep_id:# Inspire HEP author ID
 rss_icon: true # comment this line to hide the RSS icon
