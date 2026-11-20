@@ -89,6 +89,14 @@ jobs:
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
+      # Jekyll no copia ficheros que empiezan por punto, así que security.txt
+      # no llega a _site/. Se copia aquí, después del build, para no tener que
+      # tocar el 'include' de _config.yml entero.
+      - name: Publish .well-known 🪶
+        run: |
+          mkdir -p _site/.well-known
+          cp .well-known/security.txt _site/.well-known/security.txt
+          test -s _site/.well-known/security.txt
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@fa24774553152dd7873cd16ebd8d959b010c5445 # v4
