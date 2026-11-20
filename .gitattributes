@@ -1,2 +1,4 @@
 # Force LF line endings, needed for Docker to work on Windows
 *.sh text eol=lf
+# Los PDF son binarios: sin esto git los difea como texto y los patches no aplican
+*.pdf binary

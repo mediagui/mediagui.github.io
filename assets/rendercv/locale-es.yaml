@@ -1,0 +1,41 @@
+# Traducciones del CV en español. Es el contenido de
+# rendercv/schema/models/locale/other_locales/spanish.yaml de rendercv 2.8,
+# copiado aquí para que el render no dependa de los ficheros internos del paquete.
+# Cualquier clave que falte cae al inglés por defecto.
+# for more options, see https://docs.rendercv.com/user_guide/yaml_input_structure/locale/
+locale:
+  language: spanish
+  last_updated: Última actualización
+  month: mes
+  months: meses
+  year: año
+  years: años
+  present: presente
+  phrases:
+    degree_with_area: DEGREE en AREA
+  month_abbreviations:
+    - Ene
+    - Feb
+    - Mar
+    - Abr
+    - May
+    - Jun
+    - Jul
+    - Ago
+    - Sep
+    - Oct
+    - Nov
+    - Dic
+  month_names:
+    - Enero
+    - Febrero
+    - Marzo
+    - Abril
+    - Mayo
+    - Junio
+    - Julio
+    - Agosto
+    - Septiembre
+    - Octubre
+    - Noviembre
+    - Diciembre
