@@ -53,22 +53,15 @@ jobs:
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
-      - name: Get Chromium version 🌐
-        # https://github.com/GoogleChromeLabs/chrome-for-testing?tab=readme-ov-file#other-api-endpoints
-        run: |
-          CHROMIUM_VERSION=$(wget -qO- https://googlechromelabs.github.io/chrome-for-testing/LATEST_RELEASE_STABLE | cut -d. -f1)
-          echo "Chromium version: $CHROMIUM_VERSION"
-          echo "CHROMIUM_VERSION=$CHROMIUM_VERSION" >> $GITHUB_ENV
-      - name: Setup Chrome 🌐
-        id: setup-chrome
-        uses: browser-actions/setup-chrome@c785b87e244131f27c9f19c1a33e2ead956ab7ce # v1
-        with:
-          chrome-version: ${{ env.CHROMIUM_VERSION }}
-      # npm 11 bloquea los scripts de instalación salvo que se permitan, y
-      # chromedriver los necesita para descargar su binario. /usr/local/share/man
-      # es de root en ubuntu-26.04, así que un `npm install -g` normal muere al
-      # enlazar las man pages (EACCES → exit 243); con un prefijo propio no se
-      # toca /usr/local.
+      # Un `npm install -g` normal escribe las man pages en /usr/local/share/man,
+      # que es de root en ubuntu-26.04: npm muere con EACCES (exit 243). Con un
+      # prefijo propio no se toca /usr/local. Además npm 11 bloquea los scripts
+      # de instalación salvo que se permitan, y chromedriver los necesita para
+      # descargar su binario.
+      # La major del driver tiene que ser la del Chrome que se lanza de verdad:
+      # setup-chrome instala Chrome en el toolcache, pero chromedriver abre el
+      # Chrome del sistema (/opt/google/chrome) y con majors distintas falla con
+      # "session not created".
       - name: Run axe 🪓
         timeout-minutes: 10
         env:
@@ -76,10 +69,13 @@ jobs:
         run: |
           export PATH="$NPM_CONFIG_PREFIX/bin:$PATH"
           mkdir -p "$NPM_CONFIG_PREFIX"
-          npm install -g --allow-scripts=chromedriver "chromedriver@${CHROMIUM_VERSION}"
+          CHROME_MAJOR="$(google-chrome --version | grep -oE '[0-9]+' | head -1)"
+          echo "Chrome del sistema: $CHROME_MAJOR"
+          npm install -g --allow-scripts=chromedriver "chromedriver@${CHROME_MAJOR}"
           npm install -g @axe-core/cli
           CHROMEDRIVER="$(npm root -g)/chromedriver/bin/chromedriver"
           test -x "$CHROMEDRIVER"
+          "$CHROMEDRIVER" --version
           python3 -m http.server 8080 --directory _site >/tmp/http-server.log 2>&1 &
           SERVER=$!
           trap 'kill $SERVER 2>/dev/null || true' EXIT
