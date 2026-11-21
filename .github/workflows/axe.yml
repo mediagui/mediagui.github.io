@@ -62,7 +62,7 @@ jobs:
       # setup-chrome instala Chrome en el toolcache, pero chromedriver abre el
       # Chrome del sistema (/opt/google/chrome) y con majors distintas falla con
       # "session not created".
-      - name: Run axe 🪓
+      - name: Run axe (tema claro) 🪓
         timeout-minutes: 15
         env:
           NPM_CONFIG_PREFIX: ${{ github.workspace }}/.npm-global
@@ -104,3 +104,29 @@ jobs:
             echo "::endgroup::"
           done
           exit "$FAILED"
+      # El tema oscuro nunca se había auditado. axe-cli no permite inyectar
+      # scripts antes de cargar la página y este tema se aplica en cliente
+      # (localStorage), así que este pase usa el mismo axe-core desde
+      # Puppeteer fijando theme=dark antes de cada navegación.
+      - name: Run axe (tema oscuro) 🌙
+        timeout-minutes: 15
+        env:
+          NPM_CONFIG_PREFIX: ${{ github.workspace }}/.npm-global
+        run: |
+          export PATH="$NPM_CONFIG_PREFIX/bin:$PATH"
+          mkdir -p "$NPM_CONFIG_PREFIX"
+          npm install -g puppeteer-core axe-core
+          python3 -m http.server 8080 --directory _site >/tmp/http-server.log 2>&1 &
+          SERVER=$!
+          trap 'kill $SERVER 2>/dev/null || true' EXIT
+          for _ in $(seq 1 20); do curl -fsS http://localhost:8080/ >/dev/null && break; sleep 0.5; done
+          INPUT_URL="${{ github.event.inputs.url || env.URL }}"
+          if [ -n "$INPUT_URL" ]; then
+            PAGES="/${INPUT_URL#/}"
+          else
+            PAGES="/,cv/,cv/es/,blog/,books/,publications/"
+          fi
+          CHROME_PATH="$(command -v google-chrome)" \
+          NPM_GLOBAL_ROOT="$(npm root -g)" \
+          PAGES="$PAGES" \
+          node .github/scripts/axe-dark.mjs
