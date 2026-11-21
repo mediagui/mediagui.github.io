@@ -1,0 +1,310 @@
+cv:
+  name: Miguel Angel Medina
+  headline: Ingeniero de Software
+  email: mediagui@gmail.com
+  location: Madrid, España
+
+  social_networks:
+    - network: X
+      username: mediagui
+    - network: GitHub
+      username: mediagui
+    - network: LinkedIn
+      username: medinaaguilar
+
+  sections:
+    Summary:
+      - Ingeniero de software con más de 20 años de experiencia en desarrollo backend en Java, especializado en Spring Boot y JPA/Hibernate, y actualmente también con soltura en Go, PostgreSQL y entornos cloud como Snowflake. He diseñado y mantenido APIs REST de alto rendimiento, integraciones complejas y arquitecturas escalables para entornos de producción exigentes. Me centro en el desarrollo backend, la arquitectura de software, la calidad del código y las mejoras prácticas de los sistemas.
+
+    Education:
+      - institution: Universidad Nacional de Educación a Distancia
+        location: Madrid, España
+        url: https://www.uned.es/
+        area: Informática
+        degree: Ingeniería del Software
+        start_date: "2000"
+        end_date: present
+
+      - institution: CENEC Formación - Virgen de la Paloma (Centro de Formación Profesional)
+        location: Madrid, España
+        area: Informática
+        degree: Titulación técnica en Sistemas Informáticos
+        start_date: "1995"
+        end_date: "1997"
+
+    Experience:
+      - company: Base 100 S.A.
+        position: Ingeniero de Software Senior
+        location: Madrid, España
+        start_date: 2026-03
+        end_date: present
+
+      - company: InAtlas S.L.
+        position: Ingeniero de Software Senior
+        location: Madrid, España
+        start_date: 2023-12
+        end_date: 2026-01
+        summary:
+          He desarrollado y evolucionado varios microservicios REST y un monolito que está siendo convertido en otros servicios, extrayendo el núcleo de seguridad y otras partes como la lógica de reporting.
+          Trabajé con Java 11/17, Spring Boot 2, PostgreSQL como base de datos y Snowflake como data warehouse, todo desplegado en AWS Cloud externalizado.
+        highlights:
+          - Evolución y mantenimiento de la plataforma GeoBiz.
+          - Desarrollo de la plataforma GeoCRM, un CRM para las áreas de negocio definidas en GeoBiz, con arquitectura de microservicios y enfoque API first.
+          - API de venta de datos, un microservicio que ofrece una API para vender datos a clientes, con arquitectura de microservicios y enfoque API first. Usando GraphQL como lenguaje de consulta y Spring Boot 2 como framework.
+          - API Gateway, un microservicio que proporcionará y comprobará la autenticación para los microservicios actuales y futuros, con arquitectura de microservicios y enfoque API first. Usando Spring Boot 2 como framework y Keycloak como proveedor de identidad.
+
+      - company: Neoris
+        position: Líder Técnico
+        location: Madrid, España
+        start_date: 2022-04
+        end_date: 2023-12
+        summary:
+          Liderazgo técnico de un proyecto de microservicios desde cero para Zara. Responsable de la arquitectura, la orientación técnica y el mentoring de un equipo multidisciplinar de 6 desarrolladores (2 en prácticas).
+          En paralelo, evaluaciones y feedback periódico a un grupo de más de 15 personas.
+        highlights:
+          - Gestión del backlog junto al PO.
+          - Diseño e implementación de microservicios con arquitectura MVC y hexagonal con DDD.
+          - Gestión técnica exitosa de un proyecto crítico para las operaciones de taller (prensado, embalaje).
+          - Automatización de CI/CD con Spinnaker y puertas de calidad con SonarQube.
+          - Mentoring de desarrolladores junior.
+
+      - company: Neoris
+        position: Consultor Senior
+        location: Madrid, España
+        start_date: 2017-06
+        end_date: 2023-12
+        summary: Análisis, diseño y desarrollo en un equipo ágil multidisciplinar. Liderazgo técnico en la arquitectura de soluciones críticas para la gestión de efectivo y pagos.
+        highlights:
+          - Mitigación de la vulnerabilidad Log4Shell (CVE-2021-44228). Implementación de una solución temporal hasta actualizar a una versión segura en todos los proyectos. Solución desplegada en producción en 1 día.
+          - Base de datos de cifrado/descifrado en tiempo real en sustitución de Oracle Transparent Data Encryption (Oracle TDE) para cumplir con la LOPD.
+          - Desarrollo de una librería Java y dependencia Maven que centraliza y automatiza la prevención de vulnerabilidades críticas (XSS, CSRF, inyección SQL) en aplicaciones Java.
+          - Plataforma de pagos para LATAM integrada con más de 12 bancos (aceptación de pagos en efectivo, mixtos y con tarjeta).
+          - Gestor de órdenes de efectivo para Portugal (integración bancaria).
+          - "Smart Cash System: gestión de usuarios, roles y permisos para cajeros automáticos. Servicio REST de cifrado/descifrado en tiempo real (crítico en rendimiento)."
+          - Proxy inverso seguro (sustitución de iframes, prevención de XSS/CSRF/inyección SQL).
+          - Implementación de OAuth 2 e integración con Azure Cloud.
+          - Mentoring en buenas prácticas de desarrollo y pruebas unitarias.
+
+      - company: TCS (Tata Consultancy Services)
+        position: Analista Funcional / Desarrollador
+        location: Madrid, España
+        start_date: "2012"
+        end_date: "2017"
+        summary: Análisis, diseño e implementación completos de proyectos empresariales. Responsable de mejoras y mantenimiento de distintos proyectos.
+        highlights:
+          - Diseño e implementación de un sistema CI/CD empresarial con Jenkins + SonarQube + Maven + Archiva + SVN.
+          - Arquitectura completa desde la toma de requisitos → casos de uso → diseño → implementación. Automatización de pruebas de seguridad (OWASP ZED, Jenkins).
+          - "Mejoras de seguridad en una aplicación intranet monolítica: prevención de XSS/CSRF/inyección SQL."
+
+      - company: Ayuntamiento de Madrid (Departamento de Informática - IAM)
+        position: Jefe de División de Informática
+        location: Madrid, España
+        start_date: "2004"
+        end_date: "2012"
+        summary: Al frente de la división de informática del Ayuntamiento de Madrid, responsable del diseño e implementación de la estrategia y arquitectura TI del ayuntamiento. Responsable de la gestión de un equipo de más de 20 personas. Responsable del diseño y la migración de sistemas legacy a una arquitectura moderna Java y Spring.
+        highlights:
+          - RPT Vista Software. Herramienta de búsqueda y consulta de datos económicos y profesionales de más de 10.000 empleados (todavía en producción).
+          - Migración de la arquitectura de sistemas legacy de Visual Basic 6 a Java/Spring.
+          - Administración de servidores Linux Debian + Apache + MySQL.
+
+      - company: Alfa Multimedia
+        position: Analista Funcional / Desarrollador
+        location: Madrid, España
+        start_date: "2000"
+        end_date: "2004"
+        summary: Análisis, desarrollo e implementación de soluciones de gestión médica. Responsable de la infraestructura de red de la empresa. Responsable del diseño e implementación de la estrategia y arquitectura TI de la empresa. Responsable de la gestión de un equipo de más de 5 personas. Responsable del diseño y la migración de sistemas legacy a una arquitectura moderna Java y Spring.
+        highlights:
+          - Software de gestión de consultas médicas (GestMed). Desplegado en más de 15 clínicas. Software de gestión para colegios médicos, desde el análisis hasta el soporte operativo.
+          - Diseño e implementación de la infraestructura Ethernet.
+          - Administración de servidores Windows NT/2000 y Linux.
+
+    Skills:
+      - name: Desarrollo backend
+        level: Experto
+        icon: fa-solid fa-hashtag
+        keywords: "Java SE/EE, Spring Framework (Core, MVC, Batch, Data, Security), Spring Boot, microservicios, arquitectura hexagonal, Hibernate/JPA, GraphQL, Redis"
+      - name: Diseño de bases de datos
+        level: Avanzado
+        icon: fa-solid fa-hashtag
+        keywords: "PostgreSQL, Snowflake (data warehouse), Oracle 11g-19c, MySQL, SQL Server, Redis"
+      - name: Desarrollo frontend
+        level: Intermedio
+        icon: fa-solid fa-hashtag
+        keywords: "JavaScript ES6+, Vue.js 2-3, jQuery 3, Bootstrap 3-5, Angular, TypeScript"
+      - name: Cloud y DevOps
+        level: Avanzado
+        icon: fa-solid fa-hashtag
+        keywords: "Docker, Jenkins, CI/CD, Git/GitHub, GitHub Copilot, Kibana, AWS Cloud, Azure Cloud, Spinnaker, SonarQube, Go/Golang (en curso)"
+      - name: Pruebas y seguridad
+        level: Avanzado
+        icon: fa-solid fa-hashtag
+        keywords: "JUnit 5, Mockito, OWASP Top 10, cifrado RSA, OAuth2, prevención de XSS/CSRF/inyección SQL, ESAPI, prevención y mitigación de vulnerabilidades"
+      - name: Herramientas de gestión
+        level: Avanzado
+        icon: fa-solid fa-hashtag
+        keywords: "Jira, Wrike (incidencias), Notion (documentación)"
+      - name: Herramientas profesionales
+        level: Avanzado
+        icon: fa-solid fa-hashtag
+        keywords: "Git/GitHub, Maven, Postman, SonarQube, JMeter, IntelliJ IDEA Ultimate, Jira, Confluence"
+
+    Languages:
+      - name: Español
+        summary: "Nativo"
+
+      - name: Inglés
+        summary: "Nivel C1 - EOI Madrid (en curso)"
+
+    Interests:
+      - name: Programación
+        icon: fa-solid fa-tag
+        keywords: "Desarrollo de software, arquitectura de software, calidad del código, patrones de diseño, código limpio, refactoring, artesanía del software"
+
+    Certificates:
+      - name: Advanced Features of Java 21
+        url: https://www.linkedin.com/learning/certificates/f3ea22f410f42dcc6d0a8c39f1bd411f1a5268bd5fb03404d5d1a48b62254253?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Complete Guide To Java Testing with JUnit 5 & Mockito
+        url: https://www.linkedin.com/learning/certificates/9ff4ddf8e948245a6af6fbf6b076ec2c4ae751b1b9a6f9179d63a2f3fc818b3e?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Functional Programming with Java
+        url: https://www.linkedin.com/learning/certificates/50b20c3ccec3a656f11fc45bb42b7871adc78b03e65010cd2d2585b9eaf8efed?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Java Profiling
+        url: https://www.linkedin.com/learning/certificates/472569c6cd8ec28fc71b659bd1089cd14d1c300f0a2eea4e7f3d8110cb6dec7e?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Java Memory Management Values and References
+        url: https://www.linkedin.com/learning/certificates/bb713fa157d94c375671367f5a422cf813514cbe79a82ce16dabf443969b847e?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Java Refactoring Best Practices
+        url: https://www.linkedin.com/learning/certificates/bf13cab5d32e8daa222f7d120c94892bfc6792581d438fbe6d5b305a362d466f?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Java Advanced Concepts for High-Performance Development
+        url: https://www.linkedin.com/learning/certificates/592d927abf78da01a4c8d282bacfbb6b6d955561d746783c66be3f77696c1eab?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Java Lambdas and Streams
+        url: https://www.linkedin.com/learning/certificates/e5940472fc6e756a077042f162d2326774c9ce45d26f595fd4a5594d37d17067?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Java Tips and Tricks
+        url: https://www.linkedin.com/learning/certificates/993c1857258fe066d7fe308558bf4c849dfe30df2249bad79f2721e1516ff2f9?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Aprende Unit Test en Java con Junit 5 y Mockito
+        url: https://www.udemy.com/certificate/UC-6dee26f4-b19b-4bd7-8cee-1b88b046503a
+        issuer: Udemy
+      - name: JPA Avanzado - Uso profesional de JPA con Hibernate
+        url: https://www.udemy.com/certificate/UC-1a63b1db-5eb2-488f-bbd5-44d9c322ec7a
+        issuer: Udemy
+      - name: Java Application Performance Tuning and Memory Management
+        url: https://www.udemy.com/certificate/UC-2c97f156-0fa8-4913-ab05-0a40f7f2a4e4
+        issuer: Udemy
+      - name: Modern Java Mastering Features from Java 8 to Java 25
+        url: https://www.udemy.com/certificate/UC-bd2b2154-9889-4ef4-9651-7197b2ab2df7
+        issuer: Udemy
+      - name: Programación funcional en Java con Lambdas y Streams
+        url: https://www.udemy.com/certificate/UC-2f2eb080-523d-4c8a-b138-ab8a58be93a1
+        issuer: Udemy
+      - name: Spring Framework y Spring Boot
+        url: https://www.udemy.com/certificate/UC-39a8cf14-0a8f-4a55-b42a-47aace7aa88e
+        issuer: Udemy
+      - name: Master Java. Unit testing (JUnit)
+        url: https://www.linkedin.com/learning/certificates/2cd99e9947b632254e68a6cbee374506c9f7cc10daa6763894786db0fa72ccdc?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Test-Driven Development in Spring Boot with JUnit and Mockito
+        url: https://www.linkedin.com/learning/certificates/7bc5acd1c9587aa4045800eff852a3ba6eb690d67bc436234dd286eec781adc8?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Go Practice Functions
+        url: https://www.linkedin.com/learning/certificates/011955cc24a696009558d61652dec98e6b9c67f904ea02163031da3e86bbfb02?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Go Standard Library
+        url: https://www.linkedin.com/learning/certificates/4737f7203ecb9ac7279f19359e482df1b9c993fa2475819764a7f57f801a22dc?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Transition from Java to Go
+        url: https://www.linkedin.com/learning/certificates/20fb3004133f2e7950121073dd5e0bd40905ab0f6cde91ce3907eab748f375e7?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Unit Testing in Go
+        url: https://www.linkedin.com/learning/certificates/76082d284660f6d0a29ff0c4202906341b3dab5e91cabddd27976af370d41a0a?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Master Python
+        url: https://www.linkedin.com/learning/certificates/e6f0098398504961aacc48eebf8166f72edc84c4d4253d91434b32edb19c733e?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Python Advanced
+        url: https://www.linkedin.com/learning/certificates/c86fd60132b4f138eee77af4672174affc7a382c21d4cecf3ca25141b5006f15?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Python Advanced 2
+        url: https://www.linkedin.com/learning/certificates/3883043a44a49e7877edecb61d670aee1d4f08a1c295d872fcd6f3171d51d4c8?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Python Essential Training
+        url: https://www.linkedin.com/learning/certificates/6e47bc92f149c0b8f5bd4b3ca36ea8333969157d4253d19aa91694b72d68a8fc?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Python Common mistakes and how to fix them
+        url: https://www.linkedin.com/learning/certificates/ea39247eb38711ae4617abf472e0a10a6e7b5cfb305a8c8493f692845f3e7655?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: 8 Git Commands You Should Know
+        url: https://www.linkedin.com/learning/certificates/22d5e0cfc7d5ec224627e5abb7bf2778ba543fad30ffd6b394e0baaaacb65f1f?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Ditch Your Git GUI. Customize Terminal
+        url: https://www.linkedin.com/learning/certificates/895fbd900a79f9978e81c76f45a5d99cec2cf498b8bb1f79751495afcb5a9bfa?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: GitHub Quick Tips
+        url: https://www.linkedin.com/learning/certificates/234aa09d6b8805faed7d656618bc9aaaae05d8bd9c779c95f33ec239f6350d68?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Git Github todo un sistema de control de versiones desde cero
+        url: https://www.udemy.com/certificate/UC-d83cd3f6-47bc-4d79-936e-53355bb64d31
+        issuer: Udemy
+      - name: Como implementar GitFlow en Gitlab y Github
+        url: https://www.udemy.com/certificate/UC-f6ac02a8-16af-4120-afc9-739d9ada2e54
+        issuer: Udemy
+      - name: Curso de Git y Github - GIT PROFESIONAL desde cero
+        url: https://www.udemy.com/certificate/UC-a2ef4e14-ea3e-40ac-a3ce-7931e10248d7
+        issuer: Udemy
+      - name: Master GitHub Copilot
+        url: https://www.linkedin.com/learning/certificates/f36268c22f7484974d855057963c23593c9535c9a175b27298cabfc1ad80b00e?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Advanced Design Patterns. Design Principles
+        url: https://www.linkedin.com/learning/certificates/1fc922d1923ccb115ddfb50314b681c7d65df2159c931ecd7ecdcfdfd5bad2f5?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: AWS Certified Cloud Practitioner (CLF-C02) Cert Prep
+        url: https://www.linkedin.com/learning/certificates/2a6e2bc45a9ef7d6d3d88e561ef7fb9fa79ade28e67c06c466a9166f696adec4?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Azure Functions Essential Training (2019)
+        url: https://www.linkedin.com/learning/certificates/feab6030c4dfdbbe181a8bb7ccb4c12bb7434f52171e20ddc5b0d8af45c71cdd?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Azure. NoSQL development with CosmoDB
+        url: https://www.linkedin.com/learning/certificates/61468df566738ef01d5c2624e208a06ba3d93afc3eec95902b3f33132a84f346?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Design Patterns. Creational
+        url: https://www.linkedin.com/learning/certificates/4a32fdceda22f8653aedaaddc8a6fddbe71dbfac311c83d2daeba5e13a92c26c?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Master Apache Kafka
+        url: https://www.linkedin.com/learning/certificates/7812b3c0517285de45a2ce95a1f62b4a1958e77b42f6b0cef74d5ece93bfd2c0?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Programming Foundations. API and Web Services
+        url: https://www.linkedin.com/learning/certificates/6b91fc1598bd103aab29fd1b2ad7e9f864e6ac75cda3408f91f62f903da11405?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Software Architecture. Creating Sustainable Systems Essential Training
+        url: https://www.linkedin.com/learning/certificates/3f25b39f4d90ca66750d1c57cecea518f4a6a4ae65717f531d2de46ff9e58bd8?trk=share_certificate
+        issuer: LinkedIn Learning
+      - name: Apache Kafka con Java, Spring framework y AWS
+        url: https://www.udemy.com/certificate/UC-59dd802f-2d2f-41a5-bd10-f4fc7dad302b
+        issuer: Udemy
+      - name: Arquitectura Software Moderna DDD, Eventos, Microservicios
+        url: https://www.udemy.com/certificate/UC-b4f1c669-5ffc-47e3-9cd9-160f2859de55
+        issuer: Udemy
+      - name: Big Data y Spark - ingeniería de datos con Python y pyspark
+        url: https://www.udemy.com/certificate/UC-d511a447-abd7-406b-bc3d-889104e0058c
+        issuer: Udemy
+      - name: Snowflake - The Complete Masterclass
+        url: https://www.udemy.com/certificate/UC-c7532513-d4b8-46cd-b143-93104a15f6f4
+        issuer: Udemy
+      - name: Docker de principiante a experto
+        url: https://www.udemy.com/certificate/UC-35ddb35f-ae8d-4334-80d1-a23e359eaafc
+        issuer: Udemy
+      - name: Kubernetes para desarrolladores
+        url: https://www.udemy.com/certificate/UC-b18d69ae-b052-4ff5-b118-a3e19e70ce9b
+        issuer: Udemy
+      - name: Working with Docker - OCI Containers using Podman
+        url: https://www.udemy.com/certificate/UC-9befbd03-4e8a-47cf-9550-c1d699677bfc
+        issuer: Udemy
+      - name: SOLID and Clean Code Principles
+        url: https://www.udemy.com/certificate/UC-5560d01b-f30f-485c-9710-b045018a94e8
+        issuer: Udemy
