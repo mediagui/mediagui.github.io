@@ -1,0 +1,38 @@
+/*******************************************************************************
+ * Dark theme contrast fixes
+ *
+ * El tema oscuro nunca se había auditado hasta que axe empezó a recorrerlo.
+ * Estas reglas suben el contraste de los textos secundarios y de los badges de
+ * publicaciones solo en oscuro; el tema claro queda como estaba.
+ ******************************************************************************/
+
+html[data-theme="dark"] {
+  // #828282 daba 4.43:1 sobre el fondo (#1c1c1d) y 4.01:1 sobre las tarjetas
+  // (#212529); #8f8f8f llega a 5.27:1 y 4.77:1 y sigue leyéndose como gris.
+  --global-text-color-light: #8f8f8f;
+
+  // MDB fija .card-text en #747373 (3.26:1 sobre la tarjeta oscura).
+  .card-text {
+    color: var(--global-text-color-light);
+  }
+
+  // Los badges de venue llevan su color inline (uno por venue) y texto claro.
+  // Un velo oscuro deja el fondo lo bastante oscuro para el blanco con
+  // cualquier color de venue, sin cambiar la paleta.
+  .publications .abbr abbr {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    color: #fff !important;
+
+    a,
+    div {
+      color: #fff !important;
+    }
+  }
+
+  // Enlaces dentro del texto de una publicación: el cian sobre el texto claro
+  // queda en 2.72:1, así que se subrayan para no depender solo del color.
+  .publications .periodical a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}
