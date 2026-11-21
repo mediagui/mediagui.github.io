@@ -68,17 +68,12 @@ for (const pagePath of pages) {
   try {
     await page.evaluateOnNewDocument(() => localStorage.setItem("theme", "dark"));
     await page.goto(url, { waitUntil: "load", timeout: 60000 });
-    await page.waitForFunction(
-      () => document.documentElement.getAttribute("data-theme") === "dark",
-      { timeout: 15000 },
-    );
+    await page.waitForFunction(() => document.documentElement.getAttribute("data-theme") === "dark", { timeout: 15000 });
     // Mismo margen que --load-delay=1500 del pase en claro.
     await new Promise((resolve) => setTimeout(resolve, 1500));
     await page.addScriptTag({ content: axeSource });
 
-    const raw = await page.evaluate(() =>
-      axe.run(document).then((results) => JSON.stringify(results.violations)),
-    );
+    const raw = await page.evaluate(() => axe.run(document).then((results) => JSON.stringify(results.violations)));
     const violations = JSON.parse(raw);
 
     if (violations.length === 0) {
@@ -87,9 +82,7 @@ for (const pagePath of pages) {
       failed = 1;
       console.log(`/${pagePath}: ${violations.length} regla(s) incumplida(s) en tema oscuro`);
       for (const violation of violations) {
-        console.log(
-          `  [${violation.impact}] ${violation.id}: ${violation.help} (${violation.nodes.length} nodo/s)`,
-        );
+        console.log(`  [${violation.impact}] ${violation.id}: ${violation.help} (${violation.nodes.length} nodo/s)`);
         for (const node of violation.nodes.slice(0, 5)) {
           console.log(`    - ${node.target.join(" ")}`);
           if (node.failureSummary) {
@@ -97,11 +90,7 @@ for (const pagePath of pages) {
           }
         }
       }
-      console.log(
-        `::error title=axe oscuro /${pagePath}::${violations
-          .map((violation) => violation.id)
-          .join(", ")}`,
-      );
+      console.log(`::error title=axe oscuro /${pagePath}::${violations.map((violation) => violation.id).join(", ")}`);
     }
   } catch (err) {
     failed = 1;
