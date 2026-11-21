@@ -24,7 +24,7 @@
   }
 
   h2.bibliography {
-    color: var(--global-divider-color);
+    color: #8e8e8e;
     border-top: 1px solid var(--global-divider-color);
     padding-top: 1rem;
     margin-top: 2rem;
@@ -153,6 +153,12 @@
           font-size: 1em;
           line-height: 1.4em;
           padding: 10px;
+        }
+
+        // Mientras el bloque está plegado, su <pre> no debe ser un tab stop
+        // invisible; al abrirlo recupera el foco y su scroll por teclado.
+        &:not(.open) pre {
+          visibility: hidden;
         }
       }
 

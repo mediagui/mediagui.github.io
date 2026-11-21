@@ -117,6 +117,38 @@
               {% endif %}
             {% endif %}
           {% endfor %}
+          {% if page.cv_pdf or page.cv_pdf_es %}
+            <!-- CV language switch (EN / ES); el mismo menú se despliega en móvil -->
+            <li class="nav-item">
+              <span class="d-flex justify-content-end">
+                <a
+                  class="nav-link{% if page.lang != 'es' %} active{% endif %}"
+                  href="{{ '/cv/' | relative_url }}"
+                  hreflang="en"
+                  lang="en"
+                  aria-label="EN · CV en inglés"
+                  {% if page.lang != 'es' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  EN
+                </a>
+                <span class="nav-link" aria-hidden="true">/</span>
+                <a
+                  class="nav-link{% if page.lang == 'es' %} active{% endif %}"
+                  href="{{ '/cv/es/' | relative_url }}"
+                  hreflang="es"
+                  lang="es"
+                  aria-label="ES · CV en español"
+                  {% if page.lang == 'es' %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  ES
+                </a>
+              </span>
+            </li>
+          {% endif %}
           {% if site.search_enabled %}
             <!-- Search -->
             <li class="nav-item">

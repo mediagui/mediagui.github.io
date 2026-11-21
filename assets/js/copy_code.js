@@ -43,6 +43,13 @@ codeBlocks.forEach(function (codeBlock) {
       }, waitFor);
     });
 
+    // Las regiones con scroll horizontal tienen que poder recorrerse con el
+    // teclado (axe: scrollable-region-focusable). El BibTeX de /publications/
+    // es el bloque que lo dispara.
+    if (codeBlock.closest(".bibtex")) {
+      codeBlock.tabIndex = 0;
+    }
+
     // create wrapper div
     var wrapper = document.createElement("div");
     wrapper.className = "code-display-wrapper";
