@@ -87,7 +87,7 @@ jobs:
           if [ -n "$INPUT_URL" ]; then
             PAGES=("$INPUT_URL")
           else
-            PAGES=("" "cv/" "blog/" "books/" "publications/")
+            PAGES=("" "cv/" "cv/es/" "blog/" "books/" "publications/")
           fi
           FAILED=0
           for page in "${PAGES[@]}"; do
