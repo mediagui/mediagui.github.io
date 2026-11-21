@@ -140,7 +140,7 @@
         text-align: justify;
         transition-property: 0.15s ease;
         -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
+        -webkit-transition: 0.15s ease;
         -o-transition: 0.15s ease;
         transition: all 0.15s ease;
 
@@ -153,6 +153,12 @@
           font-size: 1em;
           line-height: 1.4em;
           padding: 10px;
+        }
+
+        // Mientras el bloque está plegado, su <pre> no debe ser un tab stop
+        // invisible; al abrirlo recupera el foco y su scroll por teclado.
+        &:not(.open) pre {
+          visibility: hidden;
         }
       }
 
