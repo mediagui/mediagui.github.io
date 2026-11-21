@@ -11,7 +11,9 @@ html[data-theme="dark"] {
   // (#212529); #8f8f8f llega a 5.27:1 y 4.77:1 y sigue leyéndose como gris.
   --global-text-color-light: #8f8f8f;
 
-  // MDB fija .card-text en #747373 (3.26:1 sobre la tarjeta oscura).
+  // MDB fija .card .card-body .card-text en #747373 (3.26:1 sobre la tarjeta
+  // oscura), con más especificidad que una simple clase.
+  .card .card-body .card-text,
   .card-text {
     color: var(--global-text-color-light);
   }
