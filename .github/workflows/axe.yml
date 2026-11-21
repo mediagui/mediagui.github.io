@@ -92,7 +92,15 @@ jobs:
           FAILED=0
           for page in "${PAGES[@]}"; do
             echo "::group::axe /${page}"
-            axe --chromedriver-path "$CHROMEDRIVER" "http://localhost:8080/${page}" --load-delay=1500 --exit || FAILED=1
+            # Si la página tiene violaciones, además de seguir con las demás se
+            # deja una anotación con las reglas incumplidas: el log de un job
+            # largo llega truncado por la API y así el fallo se lee en el check.
+            OUT="$(axe --chromedriver-path "$CHROMEDRIVER" "http://localhost:8080/${page}" --load-delay=1500 --exit 2>&1)" || {
+              FAILED=1
+              SUMMARY="$(printf '%s\n' "$OUT" | grep -E 'Violation of|Accessibility issues detected' | tr '\n' '|')"
+              echo "::error title=axe/${page}::${SUMMARY:-axe falló sin detallar violaciones}"
+            }
+            printf '%s\n' "$OUT"
             echo "::endgroup::"
           done
           exit "$FAILED"
